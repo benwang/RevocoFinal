@@ -1,22 +1,22 @@
 //
 //  BMWAppDelegate.h
-//  Revoco
+//  MapNotes2
 //
-//  Created by Benjamin Wang on 4/23/13.
+//  Created by Benjamin Wang on 3/13/13.
 //  Copyright (c) 2013 Benjamin Wang. All rights reserved.
 //
 
 #import <UIKit/UIKit.h>
+#import "BMWCoreLocationandMapKit.h"
+#import "BMWDataManager.h"
 
 @interface BMWAppDelegate : UIResponder <UIApplicationDelegate>
-
+{
+//    BMWCoreLocationandMapKit* sharedManager;
+}
+//@property (strong, nonatomic) BMWCoreLocationandMapKit *sharedManager;
 @property (strong, nonatomic) UIWindow *window;
-
-@property (readonly, strong, nonatomic) NSManagedObjectContext *managedObjectContext;
-@property (readonly, strong, nonatomic) NSManagedObjectModel *managedObjectModel;
-@property (readonly, strong, nonatomic) NSPersistentStoreCoordinator *persistentStoreCoordinator;
-
-- (void)saveContext;
-- (NSURL *)applicationDocumentsDirectory;
+@property (strong, nonatomic) NSArray *objects;
+@property (strong, nonatomic) BMWDataManager *dataManager;
 
 @end

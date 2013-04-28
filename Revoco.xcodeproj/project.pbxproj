@@ -7,27 +7,36 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		2565E2A9172CC6B60044427F /* BMWAddNoteViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2565E288172CC6B60044427F /* BMWAddNoteViewController.m */; };
+		2565E2AA172CC6B60044427F /* BMWAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 2565E28A172CC6B60044427F /* BMWAppDelegate.m */; };
+		2565E2AB172CC6B60044427F /* BMWCoreLocationandMapKit.m in Sources */ = {isa = PBXBuildFile; fileRef = 2565E28C172CC6B60044427F /* BMWCoreLocationandMapKit.m */; };
+		2565E2AC172CC6B60044427F /* BMWDataManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 2565E28E172CC6B60044427F /* BMWDataManager.m */; };
+		2565E2AD172CC6B60044427F /* BMWDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2565E290172CC6B60044427F /* BMWDetailViewController.m */; };
+		2565E2AE172CC6B60044427F /* BMWFindTeamViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2565E292172CC6B60044427F /* BMWFindTeamViewController.m */; };
+		2565E2AF172CC6B60044427F /* BMWLocation.m in Sources */ = {isa = PBXBuildFile; fileRef = 2565E294172CC6B60044427F /* BMWLocation.m */; };
+		2565E2B0172CC6B60044427F /* BMWMasterViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2565E296172CC6B60044427F /* BMWMasterViewController.m */; };
+		2565E2B1172CC6B60044427F /* BMWNote.m in Sources */ = {isa = PBXBuildFile; fileRef = 2565E298172CC6B60044427F /* BMWNote.m */; };
+		2565E2B2172CC6B60044427F /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 2565E299172CC6B60044427F /* Default-568h@2x.png */; };
+		2565E2B3172CC6B60044427F /* Default.png in Resources */ = {isa = PBXBuildFile; fileRef = 2565E29A172CC6B60044427F /* Default.png */; };
+		2565E2B4172CC6B60044427F /* Default@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 2565E29B172CC6B60044427F /* Default@2x.png */; };
+		2565E2B5172CC6B60044427F /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 2565E29D172CC6B60044427F /* InfoPlist.strings */; };
+		2565E2B6172CC6B60044427F /* MainStoryboard_iPad.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2565E29F172CC6B60044427F /* MainStoryboard_iPad.storyboard */; };
+		2565E2B7172CC6B60044427F /* MainStoryboard_iPhone.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2565E2A1172CC6B60044427F /* MainStoryboard_iPhone.storyboard */; };
+		2565E2B8172CC6B60044427F /* fabric_of_squares_gray.png in Resources */ = {isa = PBXBuildFile; fileRef = 2565E2A3172CC6B60044427F /* fabric_of_squares_gray.png */; };
+		2565E2B9172CC6B60044427F /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 2565E2A4172CC6B60044427F /* main.m */; };
+		2565E2BA172CC6B60044427F /* Model.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 2565E2A5172CC6B60044427F /* Model.xcdatamodeld */; };
 		2581F2B517278D2300279C07 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2581F2B417278D2300279C07 /* UIKit.framework */; };
 		2581F2B717278D2300279C07 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2581F2B617278D2300279C07 /* Foundation.framework */; };
 		2581F2B917278D2300279C07 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2581F2B817278D2300279C07 /* CoreGraphics.framework */; };
 		2581F2BB17278D2300279C07 /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2581F2BA17278D2300279C07 /* CoreData.framework */; };
-		2581F2C117278D2300279C07 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 2581F2BF17278D2300279C07 /* InfoPlist.strings */; };
-		2581F2C317278D2300279C07 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 2581F2C217278D2300279C07 /* main.m */; };
-		2581F2C717278D2300279C07 /* BMWAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 2581F2C617278D2300279C07 /* BMWAppDelegate.m */; };
-		2581F2C917278D2300279C07 /* Default.png in Resources */ = {isa = PBXBuildFile; fileRef = 2581F2C817278D2300279C07 /* Default.png */; };
-		2581F2CB17278D2300279C07 /* Default@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 2581F2CA17278D2300279C07 /* Default@2x.png */; };
-		2581F2CD17278D2300279C07 /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 2581F2CC17278D2300279C07 /* Default-568h@2x.png */; };
-		2581F2D017278D2300279C07 /* MainStoryboard_iPhone.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2581F2CE17278D2300279C07 /* MainStoryboard_iPhone.storyboard */; };
-		2581F2D317278D2300279C07 /* MainStoryboard_iPad.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2581F2D117278D2300279C07 /* MainStoryboard_iPad.storyboard */; };
-		2581F2D617278D2300279C07 /* Revoco.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 2581F2D417278D2300279C07 /* Revoco.xcdatamodeld */; };
-		2581F2D917278D2300279C07 /* BMWMasterViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2581F2D817278D2300279C07 /* BMWMasterViewController.m */; };
-		2581F2DC17278D2300279C07 /* BMWDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2581F2DB17278D2300279C07 /* BMWDetailViewController.m */; };
 		2581F2E417278D2300279C07 /* SenTestingKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2581F2E317278D2300279C07 /* SenTestingKit.framework */; };
 		2581F2E517278D2300279C07 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2581F2B417278D2300279C07 /* UIKit.framework */; };
 		2581F2E617278D2300279C07 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2581F2B617278D2300279C07 /* Foundation.framework */; };
 		2581F2E717278D2300279C07 /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2581F2BA17278D2300279C07 /* CoreData.framework */; };
 		2581F2EF17278D2300279C07 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 2581F2ED17278D2300279C07 /* InfoPlist.strings */; };
 		2581F2F217278D2300279C07 /* RevocoTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 2581F2F117278D2300279C07 /* RevocoTests.m */; };
+		2581F35A1727910800279C07 /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2581F3591727910800279C07 /* CoreLocation.framework */; };
+		2581F35C1727911400279C07 /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2581F35B1727911400279C07 /* MapKit.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -41,33 +50,48 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		2565E287172CC6B60044427F /* BMWAddNoteViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = BMWAddNoteViewController.h; path = Revoco/BMWAddNoteViewController.h; sourceTree = "<group>"; };
+		2565E288172CC6B60044427F /* BMWAddNoteViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = BMWAddNoteViewController.m; path = Revoco/BMWAddNoteViewController.m; sourceTree = "<group>"; };
+		2565E289172CC6B60044427F /* BMWAppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = BMWAppDelegate.h; path = Revoco/BMWAppDelegate.h; sourceTree = "<group>"; };
+		2565E28A172CC6B60044427F /* BMWAppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = BMWAppDelegate.m; path = Revoco/BMWAppDelegate.m; sourceTree = "<group>"; };
+		2565E28B172CC6B60044427F /* BMWCoreLocationandMapKit.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = BMWCoreLocationandMapKit.h; path = Revoco/BMWCoreLocationandMapKit.h; sourceTree = "<group>"; };
+		2565E28C172CC6B60044427F /* BMWCoreLocationandMapKit.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = BMWCoreLocationandMapKit.m; path = Revoco/BMWCoreLocationandMapKit.m; sourceTree = "<group>"; };
+		2565E28D172CC6B60044427F /* BMWDataManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = BMWDataManager.h; path = Revoco/BMWDataManager.h; sourceTree = "<group>"; };
+		2565E28E172CC6B60044427F /* BMWDataManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = BMWDataManager.m; path = Revoco/BMWDataManager.m; sourceTree = "<group>"; };
+		2565E28F172CC6B60044427F /* BMWDetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = BMWDetailViewController.h; path = Revoco/BMWDetailViewController.h; sourceTree = "<group>"; };
+		2565E290172CC6B60044427F /* BMWDetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = BMWDetailViewController.m; path = Revoco/BMWDetailViewController.m; sourceTree = "<group>"; };
+		2565E291172CC6B60044427F /* BMWFindTeamViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = BMWFindTeamViewController.h; path = Revoco/BMWFindTeamViewController.h; sourceTree = "<group>"; };
+		2565E292172CC6B60044427F /* BMWFindTeamViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = BMWFindTeamViewController.m; path = Revoco/BMWFindTeamViewController.m; sourceTree = "<group>"; };
+		2565E293172CC6B60044427F /* BMWLocation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = BMWLocation.h; path = Revoco/BMWLocation.h; sourceTree = "<group>"; };
+		2565E294172CC6B60044427F /* BMWLocation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = BMWLocation.m; path = Revoco/BMWLocation.m; sourceTree = "<group>"; };
+		2565E295172CC6B60044427F /* BMWMasterViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = BMWMasterViewController.h; path = Revoco/BMWMasterViewController.h; sourceTree = "<group>"; };
+		2565E296172CC6B60044427F /* BMWMasterViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = BMWMasterViewController.m; path = Revoco/BMWMasterViewController.m; sourceTree = "<group>"; };
+		2565E297172CC6B60044427F /* BMWNote.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = BMWNote.h; path = Revoco/BMWNote.h; sourceTree = "<group>"; };
+		2565E298172CC6B60044427F /* BMWNote.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = BMWNote.m; path = Revoco/BMWNote.m; sourceTree = "<group>"; };
+		2565E299172CC6B60044427F /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Default-568h@2x.png"; path = "Revoco/Default-568h@2x.png"; sourceTree = "<group>"; };
+		2565E29A172CC6B60044427F /* Default.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = Default.png; path = Revoco/Default.png; sourceTree = "<group>"; };
+		2565E29B172CC6B60044427F /* Default@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Default@2x.png"; path = "Revoco/Default@2x.png"; sourceTree = "<group>"; };
+		2565E29E172CC6B60044427F /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = InfoPlist.strings; sourceTree = "<group>"; };
+		2565E2A0172CC6B60044427F /* en */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = en; path = MainStoryboard_iPad.storyboard; sourceTree = "<group>"; };
+		2565E2A2172CC6B60044427F /* en */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = en; path = MainStoryboard_iPhone.storyboard; sourceTree = "<group>"; };
+		2565E2A3172CC6B60044427F /* fabric_of_squares_gray.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = fabric_of_squares_gray.png; path = Revoco/fabric_of_squares_gray.png; sourceTree = "<group>"; };
+		2565E2A4172CC6B60044427F /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = main.m; path = Revoco/main.m; sourceTree = "<group>"; };
+		2565E2A6172CC6B60044427F /* Model.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Model.xcdatamodel; sourceTree = "<group>"; };
+		2565E2A7172CC6B60044427F /* Revoco-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "Revoco-Info.plist"; path = "Revoco/Revoco-Info.plist"; sourceTree = "<group>"; };
+		2565E2A8172CC6B60044427F /* Revoco-Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "Revoco-Prefix.pch"; path = "Revoco/Revoco-Prefix.pch"; sourceTree = "<group>"; };
 		2581F2B117278D2300279C07 /* Revoco.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Revoco.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		2581F2B417278D2300279C07 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		2581F2B617278D2300279C07 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		2581F2B817278D2300279C07 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
 		2581F2BA17278D2300279C07 /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
-		2581F2BE17278D2300279C07 /* Revoco-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "Revoco-Info.plist"; sourceTree = "<group>"; };
-		2581F2C017278D2300279C07 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
-		2581F2C217278D2300279C07 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
-		2581F2C417278D2300279C07 /* Revoco-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Revoco-Prefix.pch"; sourceTree = "<group>"; };
-		2581F2C517278D2300279C07 /* BMWAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BMWAppDelegate.h; sourceTree = "<group>"; };
-		2581F2C617278D2300279C07 /* BMWAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BMWAppDelegate.m; sourceTree = "<group>"; };
-		2581F2C817278D2300279C07 /* Default.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Default.png; sourceTree = "<group>"; };
-		2581F2CA17278D2300279C07 /* Default@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default@2x.png"; sourceTree = "<group>"; };
-		2581F2CC17278D2300279C07 /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
-		2581F2CF17278D2300279C07 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = en; path = en.lproj/MainStoryboard_iPhone.storyboard; sourceTree = "<group>"; };
-		2581F2D217278D2300279C07 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = en; path = en.lproj/MainStoryboard_iPad.storyboard; sourceTree = "<group>"; };
-		2581F2D517278D2300279C07 /* Revoco.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Revoco.xcdatamodel; sourceTree = "<group>"; };
-		2581F2D717278D2300279C07 /* BMWMasterViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BMWMasterViewController.h; sourceTree = "<group>"; };
-		2581F2D817278D2300279C07 /* BMWMasterViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BMWMasterViewController.m; sourceTree = "<group>"; };
-		2581F2DA17278D2300279C07 /* BMWDetailViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BMWDetailViewController.h; sourceTree = "<group>"; };
-		2581F2DB17278D2300279C07 /* BMWDetailViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BMWDetailViewController.m; sourceTree = "<group>"; };
 		2581F2E217278D2300279C07 /* RevocoTests.octest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = RevocoTests.octest; sourceTree = BUILT_PRODUCTS_DIR; };
 		2581F2E317278D2300279C07 /* SenTestingKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SenTestingKit.framework; path = Library/Frameworks/SenTestingKit.framework; sourceTree = DEVELOPER_DIR; };
 		2581F2EC17278D2300279C07 /* RevocoTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "RevocoTests-Info.plist"; sourceTree = "<group>"; };
 		2581F2EE17278D2300279C07 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		2581F2F017278D2300279C07 /* RevocoTests.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RevocoTests.h; sourceTree = "<group>"; };
 		2581F2F117278D2300279C07 /* RevocoTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RevocoTests.m; sourceTree = "<group>"; };
+		2581F3591727910800279C07 /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
+		2581F35B1727911400279C07 /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -75,6 +99,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2581F35C1727911400279C07 /* MapKit.framework in Frameworks */,
+				2581F35A1727910800279C07 /* CoreLocation.framework in Frameworks */,
 				2581F2B517278D2300279C07 /* UIKit.framework in Frameworks */,
 				2581F2B717278D2300279C07 /* Foundation.framework in Frameworks */,
 				2581F2B917278D2300279C07 /* CoreGraphics.framework in Frameworks */,
@@ -96,10 +122,47 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		2565E29C172CC6B60044427F /* en.lproj */ = {
+			isa = PBXGroup;
+			children = (
+				2565E29D172CC6B60044427F /* InfoPlist.strings */,
+				2565E29F172CC6B60044427F /* MainStoryboard_iPad.storyboard */,
+				2565E2A1172CC6B60044427F /* MainStoryboard_iPhone.storyboard */,
+			);
+			name = en.lproj;
+			path = Revoco/en.lproj;
+			sourceTree = "<group>";
+		};
 		2581F2A817278D2300279C07 = {
 			isa = PBXGroup;
 			children = (
-				2581F2BC17278D2300279C07 /* Revoco */,
+				2565E287172CC6B60044427F /* BMWAddNoteViewController.h */,
+				2565E288172CC6B60044427F /* BMWAddNoteViewController.m */,
+				2565E289172CC6B60044427F /* BMWAppDelegate.h */,
+				2565E28A172CC6B60044427F /* BMWAppDelegate.m */,
+				2565E28B172CC6B60044427F /* BMWCoreLocationandMapKit.h */,
+				2565E28C172CC6B60044427F /* BMWCoreLocationandMapKit.m */,
+				2565E28D172CC6B60044427F /* BMWDataManager.h */,
+				2565E28E172CC6B60044427F /* BMWDataManager.m */,
+				2565E28F172CC6B60044427F /* BMWDetailViewController.h */,
+				2565E290172CC6B60044427F /* BMWDetailViewController.m */,
+				2565E291172CC6B60044427F /* BMWFindTeamViewController.h */,
+				2565E292172CC6B60044427F /* BMWFindTeamViewController.m */,
+				2565E293172CC6B60044427F /* BMWLocation.h */,
+				2565E294172CC6B60044427F /* BMWLocation.m */,
+				2565E295172CC6B60044427F /* BMWMasterViewController.h */,
+				2565E296172CC6B60044427F /* BMWMasterViewController.m */,
+				2565E297172CC6B60044427F /* BMWNote.h */,
+				2565E298172CC6B60044427F /* BMWNote.m */,
+				2565E299172CC6B60044427F /* Default-568h@2x.png */,
+				2565E29A172CC6B60044427F /* Default.png */,
+				2565E29B172CC6B60044427F /* Default@2x.png */,
+				2565E29C172CC6B60044427F /* en.lproj */,
+				2565E2A3172CC6B60044427F /* fabric_of_squares_gray.png */,
+				2565E2A4172CC6B60044427F /* main.m */,
+				2565E2A5172CC6B60044427F /* Model.xcdatamodeld */,
+				2565E2A7172CC6B60044427F /* Revoco-Info.plist */,
+				2565E2A8172CC6B60044427F /* Revoco-Prefix.pch */,
 				2581F2EA17278D2300279C07 /* RevocoTests */,
 				2581F2B317278D2300279C07 /* Frameworks */,
 				2581F2B217278D2300279C07 /* Products */,
@@ -118,6 +181,8 @@
 		2581F2B317278D2300279C07 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				2581F35B1727911400279C07 /* MapKit.framework */,
+				2581F3591727910800279C07 /* CoreLocation.framework */,
 				2581F2B417278D2300279C07 /* UIKit.framework */,
 				2581F2B617278D2300279C07 /* Foundation.framework */,
 				2581F2B817278D2300279C07 /* CoreGraphics.framework */,
@@ -125,37 +190,6 @@
 				2581F2E317278D2300279C07 /* SenTestingKit.framework */,
 			);
 			name = Frameworks;
-			sourceTree = "<group>";
-		};
-		2581F2BC17278D2300279C07 /* Revoco */ = {
-			isa = PBXGroup;
-			children = (
-				2581F2C517278D2300279C07 /* BMWAppDelegate.h */,
-				2581F2C617278D2300279C07 /* BMWAppDelegate.m */,
-				2581F2CE17278D2300279C07 /* MainStoryboard_iPhone.storyboard */,
-				2581F2D117278D2300279C07 /* MainStoryboard_iPad.storyboard */,
-				2581F2D717278D2300279C07 /* BMWMasterViewController.h */,
-				2581F2D817278D2300279C07 /* BMWMasterViewController.m */,
-				2581F2DA17278D2300279C07 /* BMWDetailViewController.h */,
-				2581F2DB17278D2300279C07 /* BMWDetailViewController.m */,
-				2581F2D417278D2300279C07 /* Revoco.xcdatamodeld */,
-				2581F2BD17278D2300279C07 /* Supporting Files */,
-			);
-			path = Revoco;
-			sourceTree = "<group>";
-		};
-		2581F2BD17278D2300279C07 /* Supporting Files */ = {
-			isa = PBXGroup;
-			children = (
-				2581F2BE17278D2300279C07 /* Revoco-Info.plist */,
-				2581F2BF17278D2300279C07 /* InfoPlist.strings */,
-				2581F2C217278D2300279C07 /* main.m */,
-				2581F2C417278D2300279C07 /* Revoco-Prefix.pch */,
-				2581F2C817278D2300279C07 /* Default.png */,
-				2581F2CA17278D2300279C07 /* Default@2x.png */,
-				2581F2CC17278D2300279C07 /* Default-568h@2x.png */,
-			);
-			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
 		2581F2EA17278D2300279C07 /* RevocoTests */ = {
@@ -249,12 +283,13 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				2581F2C117278D2300279C07 /* InfoPlist.strings in Resources */,
-				2581F2C917278D2300279C07 /* Default.png in Resources */,
-				2581F2CB17278D2300279C07 /* Default@2x.png in Resources */,
-				2581F2CD17278D2300279C07 /* Default-568h@2x.png in Resources */,
-				2581F2D017278D2300279C07 /* MainStoryboard_iPhone.storyboard in Resources */,
-				2581F2D317278D2300279C07 /* MainStoryboard_iPad.storyboard in Resources */,
+				2565E2B2172CC6B60044427F /* Default-568h@2x.png in Resources */,
+				2565E2B3172CC6B60044427F /* Default.png in Resources */,
+				2565E2B4172CC6B60044427F /* Default@2x.png in Resources */,
+				2565E2B5172CC6B60044427F /* InfoPlist.strings in Resources */,
+				2565E2B6172CC6B60044427F /* MainStoryboard_iPad.storyboard in Resources */,
+				2565E2B7172CC6B60044427F /* MainStoryboard_iPhone.storyboard in Resources */,
+				2565E2B8172CC6B60044427F /* fabric_of_squares_gray.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -289,11 +324,17 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				2581F2C317278D2300279C07 /* main.m in Sources */,
-				2581F2C717278D2300279C07 /* BMWAppDelegate.m in Sources */,
-				2581F2D617278D2300279C07 /* Revoco.xcdatamodeld in Sources */,
-				2581F2D917278D2300279C07 /* BMWMasterViewController.m in Sources */,
-				2581F2DC17278D2300279C07 /* BMWDetailViewController.m in Sources */,
+				2565E2A9172CC6B60044427F /* BMWAddNoteViewController.m in Sources */,
+				2565E2AA172CC6B60044427F /* BMWAppDelegate.m in Sources */,
+				2565E2AB172CC6B60044427F /* BMWCoreLocationandMapKit.m in Sources */,
+				2565E2AC172CC6B60044427F /* BMWDataManager.m in Sources */,
+				2565E2AD172CC6B60044427F /* BMWDetailViewController.m in Sources */,
+				2565E2AE172CC6B60044427F /* BMWFindTeamViewController.m in Sources */,
+				2565E2AF172CC6B60044427F /* BMWLocation.m in Sources */,
+				2565E2B0172CC6B60044427F /* BMWMasterViewController.m in Sources */,
+				2565E2B1172CC6B60044427F /* BMWNote.m in Sources */,
+				2565E2B9172CC6B60044427F /* main.m in Sources */,
+				2565E2BA172CC6B60044427F /* Model.xcdatamodeld in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -316,28 +357,28 @@
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
-		2581F2BF17278D2300279C07 /* InfoPlist.strings */ = {
+		2565E29D172CC6B60044427F /* InfoPlist.strings */ = {
 			isa = PBXVariantGroup;
 			children = (
-				2581F2C017278D2300279C07 /* en */,
+				2565E29E172CC6B60044427F /* en */,
 			);
 			name = InfoPlist.strings;
 			sourceTree = "<group>";
 		};
-		2581F2CE17278D2300279C07 /* MainStoryboard_iPhone.storyboard */ = {
+		2565E29F172CC6B60044427F /* MainStoryboard_iPad.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
-				2581F2CF17278D2300279C07 /* en */,
-			);
-			name = MainStoryboard_iPhone.storyboard;
-			sourceTree = "<group>";
-		};
-		2581F2D117278D2300279C07 /* MainStoryboard_iPad.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				2581F2D217278D2300279C07 /* en */,
+				2565E2A0172CC6B60044427F /* en */,
 			);
 			name = MainStoryboard_iPad.storyboard;
+			sourceTree = "<group>";
+		};
+		2565E2A1172CC6B60044427F /* MainStoryboard_iPhone.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				2565E2A2172CC6B60044427F /* en */,
+			);
+			name = MainStoryboard_iPhone.storyboard;
 			sourceTree = "<group>";
 		};
 		2581F2ED17278D2300279C07 /* InfoPlist.strings */ = {
@@ -484,6 +525,7 @@
 				2581F2F717278D2300279C07 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		2581F2F817278D2300279C07 /* Build configuration list for PBXNativeTarget "RevocoTests" */ = {
 			isa = XCConfigurationList;
@@ -492,17 +534,19 @@
 				2581F2FA17278D2300279C07 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 
 /* Begin XCVersionGroup section */
-		2581F2D417278D2300279C07 /* Revoco.xcdatamodeld */ = {
+		2565E2A5172CC6B60044427F /* Model.xcdatamodeld */ = {
 			isa = XCVersionGroup;
 			children = (
-				2581F2D517278D2300279C07 /* Revoco.xcdatamodel */,
+				2565E2A6172CC6B60044427F /* Model.xcdatamodel */,
 			);
-			currentVersion = 2581F2D517278D2300279C07 /* Revoco.xcdatamodel */;
-			path = Revoco.xcdatamodeld;
+			currentVersion = 2565E2A6172CC6B60044427F /* Model.xcdatamodel */;
+			name = Model.xcdatamodeld;
+			path = Revoco/Model.xcdatamodeld;
 			sourceTree = "<group>";
 			versionGroupType = wrapper.xcdatamodel;
 		};

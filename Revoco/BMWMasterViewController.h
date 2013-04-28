@@ -1,22 +1,21 @@
 //
 //  BMWMasterViewController.h
-//  Revoco
+//  MapNotes2
 //
-//  Created by Benjamin Wang on 4/23/13.
+//  Created by Benjamin Wang on 3/13/13.
 //  Copyright (c) 2013 Benjamin Wang. All rights reserved.
 //
 
 #import <UIKit/UIKit.h>
+#import "BMWAppDelegate.h"
+#import "BMWNote.h"
 
 @class BMWDetailViewController;
 
-#import <CoreData/CoreData.h>
+@interface BMWMasterViewController : UITableViewController < UITableViewDataSource, UITableViewDelegate>
 
-@interface BMWMasterViewController : UITableViewController <NSFetchedResultsControllerDelegate>
 
 @property (strong, nonatomic) BMWDetailViewController *detailViewController;
-
-@property (strong, nonatomic) NSFetchedResultsController *fetchedResultsController;
-@property (strong, nonatomic) NSManagedObjectContext *managedObjectContext;
+@property (strong, nonatomic) BMWDataManager *dataManager;
 
 @end
