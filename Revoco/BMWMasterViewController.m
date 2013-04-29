@@ -1,6 +1,6 @@
 //
 //  BMWMasterViewController.m
-//  MapNotes2
+//  Revoco
 //
 //  Created by Benjamin Wang on 3/13/13.
 //  Copyright (c) 2013 Benjamin Wang. All rights reserved.

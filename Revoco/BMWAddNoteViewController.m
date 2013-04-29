@@ -1,6 +1,6 @@
 //
 //  BMWAddNoteViewController.m
-//  MapNotes2
+//  Revoco
 //
 //  Created by Benjamin Wang on 3/13/13.
 //  Copyright (c) 2013 Benjamin Wang. All rights reserved.
@@ -31,8 +31,11 @@
 {
     [super viewDidLoad];
     self.navigationController.navigationBarHidden = NO;
-    
-    self.titleField.delegate = self;
+    appDelegate = (BMWAppDelegate *)[[UIApplication sharedApplication] delegate];
+    /*
+//Mapnotes designation
+//    self.titleField.delegate = self;
+     */
     self.contentField.delegate = self;
     
 	// Set up background image
@@ -41,6 +44,15 @@
     
     //Prep for exiting keyboard out of title field when you return
     
+}
+
+- (void)viewDidAppear:(BOOL)animated {
+    if (appDelegate.team1) {
+        self.Team1Label.text = appDelegate.team1;
+    }
+    if (appDelegate.team2) {
+        self.Team2Label.text = appDelegate.team2;
+    }
 }
 
 - (void)didReceiveMemoryWarning
@@ -71,12 +83,30 @@
 //    [appDelegate.objects addObject:object];
     
     //then put it into core data
-    NSLog(@"%@", self.titleField.text);
+/*MapNotes designation
+//    NSLog(@"%@", self.titleField.text);
+*/
+    NSLog(@"%@",self.Team1Label.text);
+    NSLog(@"%@",self.Team2Label.text);
     NSLog(@"%@", self.contentField.text);
-    BOOL status = [dataManager addNoteContentWithDate:self.date Title:self.titleField.text Detail:self.contentField.text Coordinate:location];
-    NSLog(status ? @"Yes" : @"No");
+    
+    //TODO:::: to fix dataManager for new update
+//    BOOL status = [dataManager addNoteContentWithDate:self.date Title:self.titleField.text Detail:self.contentField.text Coordinate:location];
+//    NSLog(status ? @"Yes" : @"No");
 //    [appDelegate.objects addObject:]
+    
     [self dismissViewControllerAnimated:YES completion:nil];
+}
+
+- (IBAction)viewTapped:(UIGestureRecognizer *)sender
+{
+    [self textViewShouldEndEditing:self.contentField];
+}
+
+- (BOOL)textViewShouldEndEditing:(UITextField *)textField
+{
+    [textField resignFirstResponder];
+    return YES;
 }
 
 @end

@@ -25,6 +25,7 @@
 		2565E2B8172CC6B60044427F /* fabric_of_squares_gray.png in Resources */ = {isa = PBXBuildFile; fileRef = 2565E2A3172CC6B60044427F /* fabric_of_squares_gray.png */; };
 		2565E2B9172CC6B60044427F /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 2565E2A4172CC6B60044427F /* main.m */; };
 		2565E2BA172CC6B60044427F /* Model.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 2565E2A5172CC6B60044427F /* Model.xcdatamodeld */; };
+		2565E2FA172CD1280044427F /* NFL_logo.png in Resources */ = {isa = PBXBuildFile; fileRef = 2565E2F9172CD1280044427F /* NFL_logo.png */; };
 		2581F2B517278D2300279C07 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2581F2B417278D2300279C07 /* UIKit.framework */; };
 		2581F2B717278D2300279C07 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2581F2B617278D2300279C07 /* Foundation.framework */; };
 		2581F2B917278D2300279C07 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2581F2B817278D2300279C07 /* CoreGraphics.framework */; };
@@ -79,6 +80,7 @@
 		2565E2A6172CC6B60044427F /* Model.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Model.xcdatamodel; sourceTree = "<group>"; };
 		2565E2A7172CC6B60044427F /* Revoco-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "Revoco-Info.plist"; path = "Revoco/Revoco-Info.plist"; sourceTree = "<group>"; };
 		2565E2A8172CC6B60044427F /* Revoco-Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "Revoco-Prefix.pch"; path = "Revoco/Revoco-Prefix.pch"; sourceTree = "<group>"; };
+		2565E2F9172CD1280044427F /* NFL_logo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = NFL_logo.png; path = Revoco/NFL_logo.png; sourceTree = "<group>"; };
 		2581F2B117278D2300279C07 /* Revoco.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Revoco.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		2581F2B417278D2300279C07 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		2581F2B617278D2300279C07 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -157,6 +159,7 @@
 				2565E299172CC6B60044427F /* Default-568h@2x.png */,
 				2565E29A172CC6B60044427F /* Default.png */,
 				2565E29B172CC6B60044427F /* Default@2x.png */,
+				2565E2F9172CD1280044427F /* NFL_logo.png */,
 				2565E29C172CC6B60044427F /* en.lproj */,
 				2565E2A3172CC6B60044427F /* fabric_of_squares_gray.png */,
 				2565E2A4172CC6B60044427F /* main.m */,
@@ -290,6 +293,7 @@
 				2565E2B6172CC6B60044427F /* MainStoryboard_iPad.storyboard in Resources */,
 				2565E2B7172CC6B60044427F /* MainStoryboard_iPhone.storyboard in Resources */,
 				2565E2B8172CC6B60044427F /* fabric_of_squares_gray.png in Resources */,
+				2565E2FA172CD1280044427F /* NFL_logo.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

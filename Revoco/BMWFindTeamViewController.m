@@ -25,14 +25,15 @@
     self.pickerView.delegate = self;
     self.pickerView.dataSource = self;
     
+    self.appDelegate = (BMWAppDelegate *)[[UIApplication sharedApplication] delegate];
     
     self.navigationController.navigationBarHidden = NO;
     
     //Implement Done button
-    /*
-    UIBarButtonItem *doneButton = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemAdd target:self action:@selector(insertNewObject:)];
+    
+    UIBarButtonItem *doneButton = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemDone target:self action:@selector(returnText)];
     self.navigationItem.rightBarButtonItem = doneButton;
-     */
+     
     
 	// Set up background image
     UIImage *patternImage = [UIImage imageNamed:@"NFL_logo.png"];
@@ -41,6 +42,14 @@
     //Initialize PickerView array
     nflTeams = [[NSMutableArray alloc] init];
     [self addNFLTeams];
+}
+
+#pragma mark - Manipulating Team Array
+
+- (void) returnText
+{
+    [self.navigationController popViewControllerAnimated:YES];
+//dismissViewControllerAnimated:YES completion:nil];
 }
 
 - (BOOL)addNFLTeams
@@ -81,6 +90,8 @@
     return YES;
 }
 
+#pragma mark - Required UIPickerView Methods
+
 - (NSInteger)numberOfComponentsInPickerView:(UIPickerView *)pickerView
 {    
     return 1;
@@ -99,6 +110,7 @@
 - (void)pickerView:(UIPickerView *)thePickerView didSelectRow:(NSInteger)row inComponent:(NSInteger)component
 {    
     NSLog(@"Selected Team: %@. Index of selected team: %i", [nflTeams objectAtIndex:row], row);
+    self.appDelegate.team1 = [nflTeams objectAtIndex:row];
 }
 
 

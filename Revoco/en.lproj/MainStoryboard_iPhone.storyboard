@@ -24,7 +24,7 @@
             <objects>
                 <tableViewController storyboardIdentifier="" title="Master" id="12" customClass="BMWMasterViewController" sceneMemberID="viewController">
                     <tableView key="view" opaque="NO" clipsSubviews="YES" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" id="13">
-                        <rect key="frame" x="0.0" y="64" width="320" height="504"/>
+                        <rect key="frame" x="0.0" y="64" width="320" height="416"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <prototypes>
@@ -71,10 +71,10 @@
             <objects>
                 <viewController storyboardIdentifier="" title="Detail" id="21" customClass="BMWDetailViewController" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="22">
-                        <rect key="frame" x="0.0" y="64" width="320" height="504"/>
+                        <rect key="frame" x="0.0" y="64" width="320" height="416"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
-                            <label clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" text="Detail view content goes here" textAlignment="center" lineBreakMode="tailTruncation" minimumFontSize="10" translatesAutoresizingMaskIntoConstraints="NO" id="27">
+                            <label clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" text="Date" lineBreakMode="tailTruncation" minimumFontSize="10" translatesAutoresizingMaskIntoConstraints="NO" id="27">
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <fontDescription key="fontDescription" type="system" size="system"/>
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
@@ -169,13 +169,12 @@
             <objects>
                 <viewController id="Hur-KY-JIf" customClass="BMWAddNoteViewController" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Uab-as-RCb">
-                        <rect key="frame" x="0.0" y="64" width="320" height="504"/>
+                        <rect key="frame" x="0.0" y="64" width="320" height="416"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
-                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Team1" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hOY-ff-w8B">
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Team 1" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hOY-ff-w8B">
                                 <constraints>
-                                    <constraint firstAttribute="width" constant="53" id="3w2-Sp-02C"/>
-                                    <constraint firstAttribute="height" constant="21" id="B94-Uz-8MI"/>
+                                    <constraint firstAttribute="width" constant="153" id="b3e-dJ-1hS"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" name="TrebuchetMS" family="Trebuchet MS" pointSize="17"/>
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
@@ -197,10 +196,7 @@
                                     <segue destination="kfL-nC-IKL" kind="push" identifier="getTeam" id="kKt-93-Lm6"/>
                                 </connections>
                             </button>
-                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Team2" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="uVp-yp-Svl">
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="21" id="xul-jH-1ML"/>
-                                </constraints>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Team 2" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="uVp-yp-Svl">
                                 <fontDescription key="fontDescription" name="TrebuchetMS" family="Trebuchet MS" pointSize="17"/>
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
@@ -218,15 +214,14 @@
                                     <segue destination="kfL-nC-IKL" kind="push" identifier="getTeam2" id="C6i-uM-Dtn"/>
                                 </connections>
                             </button>
-                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="NL2-Mt-uPR">
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" text="Enter in notes about game" translatesAutoresizingMaskIntoConstraints="NO" id="NL2-Mt-uPR">
                                 <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
-                                    <constraint firstAttribute="width" constant="240" id="Jfv-lY-rx5"/>
-                                    <constraint firstAttribute="height" constant="215" id="N14-N0-ApH"/>
+                                    <constraint firstAttribute="width" constant="240" id="Yp1-BL-vTf"/>
+                                    <constraint firstAttribute="height" constant="173" id="quD-Uj-Q5W"/>
                                 </constraints>
-                                <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
                                 <fontDescription key="fontDescription" name="TrebuchetMS" family="Trebuchet MS" pointSize="14"/>
-                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences" enablesReturnKeyAutomatically="YES"/>
                             </textView>
                             <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Game Notes:" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="uq4-cu-jmE">
                                 <constraints>
@@ -239,30 +234,43 @@
                             </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <gestureRecognizers/>
                         <constraints>
-                            <constraint firstItem="X8c-fY-G96" firstAttribute="centerY" secondItem="hOY-ff-w8B" secondAttribute="centerY" type="default" id="EQq-8K-8gq"/>
+                            <constraint firstItem="uVp-yp-Svl" firstAttribute="trailing" secondItem="hOY-ff-w8B" secondAttribute="trailing" type="default" id="DwS-ak-1eI"/>
                             <constraint firstItem="X8c-fY-G96" firstAttribute="leading" secondItem="0hz-wo-47L" secondAttribute="leading" type="default" id="Fe1-8L-1yl"/>
-                            <constraint firstItem="0hz-wo-47L" firstAttribute="centerY" secondItem="uVp-yp-Svl" secondAttribute="centerY" type="default" id="KxE-Qe-jDl"/>
-                            <constraint firstItem="uVp-yp-Svl" firstAttribute="leading" secondItem="hOY-ff-w8B" secondAttribute="leading" type="default" id="LnK-V2-Nf6"/>
+                            <constraint firstAttribute="bottom" secondItem="NL2-Mt-uPR" secondAttribute="bottom" constant="20" symbolic="YES" type="default" id="Jsk-DF-It4"/>
+                            <constraint firstItem="uVp-yp-Svl" firstAttribute="leading" secondItem="hOY-ff-w8B" secondAttribute="leading" type="default" id="M5j-ig-xW5"/>
                             <constraint firstItem="X8c-fY-G96" firstAttribute="baseline" secondItem="hOY-ff-w8B" secondAttribute="baseline" type="default" id="N1X-hl-TJO"/>
                             <constraint firstItem="NL2-Mt-uPR" firstAttribute="centerX" secondItem="Uab-as-RCb" secondAttribute="centerX" type="default" id="NFl-uW-sa2"/>
                             <constraint firstItem="uq4-cu-jmE" firstAttribute="leading" secondItem="Uab-as-RCb" secondAttribute="leading" constant="48" id="QoO-pZ-CC8"/>
-                            <constraint firstItem="NL2-Mt-uPR" firstAttribute="top" secondItem="uq4-cu-jmE" secondAttribute="bottom" constant="8" symbolic="YES" type="default" id="UvI-Rr-FNB"/>
-                            <constraint firstItem="uq4-cu-jmE" firstAttribute="top" secondItem="Uab-as-RCb" secondAttribute="top" constant="199" id="WSw-Or-WYn"/>
+                            <constraint firstItem="NL2-Mt-uPR" firstAttribute="top" secondItem="uq4-cu-jmE" secondAttribute="bottom" constant="8" symbolic="YES" type="default" id="Y9v-ed-DGl"/>
                             <constraint firstItem="X8c-fY-G96" firstAttribute="trailing" secondItem="0hz-wo-47L" secondAttribute="trailing" type="default" id="YdC-dM-Fxc"/>
                             <constraint firstItem="0hz-wo-47L" firstAttribute="trailing" secondItem="NL2-Mt-uPR" secondAttribute="trailing" type="default" id="dPh-BS-ZlS"/>
+                            <constraint firstItem="hOY-ff-w8B" firstAttribute="leading" secondItem="Uab-as-RCb" secondAttribute="leading" constant="16" id="ebz-SB-nsH"/>
                             <constraint firstItem="X8c-fY-G96" firstAttribute="top" secondItem="Uab-as-RCb" secondAttribute="top" constant="50" id="hIB-9g-vF7"/>
-                            <constraint firstItem="hOY-ff-w8B" firstAttribute="leading" secondItem="Uab-as-RCb" secondAttribute="leading" constant="72" id="hjm-EY-eqg"/>
                             <constraint firstItem="0hz-wo-47L" firstAttribute="top" secondItem="Uab-as-RCb" secondAttribute="top" constant="118" id="rpa-JD-v0O"/>
-                            <constraint firstItem="hOY-ff-w8B" firstAttribute="trailing" secondItem="uVp-yp-Svl" secondAttribute="trailing" type="default" id="wyd-Bn-rqr"/>
                             <constraint firstItem="0hz-wo-47L" firstAttribute="baseline" secondItem="uVp-yp-Svl" secondAttribute="baseline" type="default" id="zoQ-6r-ppU"/>
                         </constraints>
+                        <connections>
+                            <outletCollection property="gestureRecognizers" destination="aK4-PD-rxw" appends="YES" id="kKP-eC-Q6j"/>
+                        </connections>
                     </view>
                     <navigationItem key="navigationItem" title="Add Game" id="6nc-xV-6FG">
                         <barButtonItem key="backBarButtonItem" title="back" id="Ewy-QW-Oe3"/>
                     </navigationItem>
+                    <connections>
+                        <outlet property="Team1Label" destination="hOY-ff-w8B" id="h7I-wX-hyT"/>
+                        <outlet property="Team2Label" destination="uVp-yp-Svl" id="VHH-ew-iFf"/>
+                        <outlet property="contentField" destination="NL2-Mt-uPR" id="BS7-Zq-qHV"/>
+                        <outlet property="gestureRecognizer" destination="aK4-PD-rxw" id="FxF-g5-dDr"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="sVo-FV-ZJP" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <tapGestureRecognizer id="aK4-PD-rxw">
+                    <connections>
+                        <action selector="viewTapped:" destination="Hur-KY-JIf" id="VSl-cH-PRi"/>
+                    </connections>
+                </tapGestureRecognizer>
             </objects>
             <point key="canvasLocation" x="322" y="736"/>
         </scene>
@@ -318,7 +326,7 @@
             <objects>
                 <viewController id="kfL-nC-IKL" customClass="BMWFindTeamViewController" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8MN-0b-hIU">
-                        <rect key="frame" x="0.0" y="64" width="320" height="504"/>
+                        <rect key="frame" x="0.0" y="64" width="320" height="416"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
                             <pickerView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="d4T-qF-BVo">
@@ -330,8 +338,8 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="d4T-qF-BVo" firstAttribute="top" secondItem="8MN-0b-hIU" secondAttribute="top" constant="95" id="Mnv-KI-4TT"/>
-                            <constraint firstItem="d4T-qF-BVo" firstAttribute="centerX" secondItem="8MN-0b-hIU" secondAttribute="centerX" type="default" id="sXm-FY-SZH"/>
+                            <constraint firstItem="d4T-qF-BVo" firstAttribute="centerX" secondItem="8MN-0b-hIU" secondAttribute="centerX" type="default" id="0eq-IH-JLW"/>
+                            <constraint firstAttribute="bottom" secondItem="d4T-qF-BVo" secondAttribute="bottom" constant="20" symbolic="YES" type="default" id="xB1-ht-Yuq"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="Find Team" id="iFJ-Ev-gq2"/>
@@ -350,8 +358,11 @@
             <relationships>
                 <relationship kind="action" name="cancelModalViewController:"/>
                 <relationship kind="action" name="doneWithModalViewController:"/>
+                <relationship kind="action" name="viewTapped:" candidateClass="UIGestureRecognizer"/>
+                <relationship kind="outlet" name="Team1Label" candidateClass="UILabel"/>
+                <relationship kind="outlet" name="Team2Label" candidateClass="UILabel"/>
                 <relationship kind="outlet" name="contentField" candidateClass="UITextView"/>
-                <relationship kind="outlet" name="titleField" candidateClass="UITextField"/>
+                <relationship kind="outlet" name="gestureRecognizer" candidateClass="UITapGestureRecognizer"/>
             </relationships>
         </class>
         <class className="BMWDetailViewController" superclassName="UIViewController">
@@ -379,7 +390,7 @@
     <simulatedMetricsContainer key="defaultSimulatedMetrics">
         <simulatedStatusBarMetrics key="statusBar"/>
         <simulatedOrientationMetrics key="orientation"/>
-        <simulatedScreenMetrics key="destination" type="retina4"/>
+        <simulatedScreenMetrics key="destination"/>
     </simulatedMetricsContainer>
     <inferredMetricsTieBreakers>
         <segue reference="C6i-uM-Dtn"/>

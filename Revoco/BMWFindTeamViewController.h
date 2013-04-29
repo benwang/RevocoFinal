@@ -8,6 +8,7 @@
 
 #import <Foundation/Foundation.h>
 #import <UIKit/UIKit.h>
+#import "BMWAddNoteViewController.h"
 
 @interface BMWFindTeamViewController : UIViewController<UIPickerViewDataSource, UIPickerViewDelegate>
 {
@@ -15,6 +16,9 @@
 }
 
 //@property(nonatomic, assign) id<UIPickerViewDelegate> delegate;
+//is this right?
+@property (weak, nonatomic) BMWAppDelegate *appDelegate;
+
 @property (weak,nonatomic) IBOutlet UIPickerView *pickerView;
 
 - (BOOL)addNFLTeams;
