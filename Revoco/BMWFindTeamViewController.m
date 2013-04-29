@@ -110,9 +110,13 @@
 - (void)pickerView:(UIPickerView *)thePickerView didSelectRow:(NSInteger)row inComponent:(NSInteger)component
 {    
     NSLog(@"Selected Team: %@. Index of selected team: %i", [nflTeams objectAtIndex:row], row);
-    self.appDelegate.team1 = [nflTeams objectAtIndex:row];
+    if  ([self.segueID isEqualToString: @"Team1"]) {
+        self.appDelegate.team1 = [nflTeams objectAtIndex:row];
+    }
+    else if ([self.segueID isEqualToString:@"Team2"]) {
+        self.appDelegate.team2 = [nflTeams objectAtIndex:row];
+    }
 }
-
 
 @end
 

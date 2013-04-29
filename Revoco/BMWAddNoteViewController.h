@@ -30,7 +30,7 @@
 - (IBAction)cancelModalViewController:(id)sender;
 - (IBAction)doneWithModalViewController:(id)sender;
 - (IBAction)viewTapped:(UIGestureRecognizer *)sender;
-- (BOOL)textFieldShouldEndEditing:(UITextField *)textField;
+- (BOOL)textViewShouldEndEditing:(UITextField *)textField;
 
 
 @end

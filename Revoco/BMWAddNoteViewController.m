@@ -7,6 +7,7 @@
 //
 
 #import "BMWAddNoteViewController.h"
+#import "BMWFindTeamViewController.h"
 
 @interface BMWAddNoteViewController ()
 {
@@ -17,6 +18,8 @@
 @end
 
 @implementation BMWAddNoteViewController
+
+#pragma mark - Default View Controller Methods
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
@@ -61,6 +64,8 @@
     // Dispose of any resources that can be recreated.
 }
 
+#pragma mark -- Navigation methods
+
 - (IBAction)cancelModalViewController:(id)sender
 {
     [self dismissViewControllerAnimated:YES completion:nil];
@@ -95,18 +100,35 @@
 //    NSLog(status ? @"Yes" : @"No");
 //    [appDelegate.objects addObject:]
     
+    //Reset team1/team2 vars to set label for next time you add a note
+    appDelegate.team1 = @"Team1";
+    appDelegate.team2 = @"Team2";
     [self dismissViewControllerAnimated:YES completion:nil];
 }
+
+#pragma mark - Gesture Recognizer Methods
 
 - (IBAction)viewTapped:(UIGestureRecognizer *)sender
 {
     [self textViewShouldEndEditing:self.contentField];
 }
 
-- (BOOL)textViewShouldEndEditing:(UITextField *)textField
+- (BOOL)textViewShouldEndEditing:(UITextView *)textView
 {
-    [textField resignFirstResponder];
+    [textView resignFirstResponder];
     return YES;
+}
+
+# pragma mark - Segue transitions
+
+- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
+    if ([[segue identifier] isEqualToString:@"getTeam"]) {
+        // Message Pass to BMWFindTeamViewController that you should be setting Team1Label
+        [[segue destinationViewController] setSegueID:@"Team1"];
+        }
+    else if ([[segue identifier] isEqualToString:@"getTeam2"]) {
+        [[segue destinationViewController] setSegueID:@"Team2"];
+    }
 }
 
 @end

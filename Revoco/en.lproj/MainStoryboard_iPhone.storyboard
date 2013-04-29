@@ -257,6 +257,12 @@
                     </view>
                     <navigationItem key="navigationItem" title="Add Game" id="6nc-xV-6FG">
                         <barButtonItem key="backBarButtonItem" title="back" id="Ewy-QW-Oe3"/>
+                        <barButtonItem key="rightBarButtonItem" title="Done" id="Y02-3y-VRe">
+                            <color key="tintColor" red="0.19607843459999999" green="0.30980393290000002" blue="0.52156865600000002" alpha="1" colorSpace="calibratedRGB"/>
+                            <connections>
+                                <action selector="doneWithModalViewController:" destination="Hur-KY-JIf" id="5tZ-FU-8Ii"/>
+                            </connections>
+                        </barButtonItem>
                     </navigationItem>
                     <connections>
                         <outlet property="Team1Label" destination="hOY-ff-w8B" id="h7I-wX-hyT"/>
@@ -363,6 +369,7 @@
                 <relationship kind="outlet" name="Team2Label" candidateClass="UILabel"/>
                 <relationship kind="outlet" name="contentField" candidateClass="UITextView"/>
                 <relationship kind="outlet" name="gestureRecognizer" candidateClass="UITapGestureRecognizer"/>
+                <relationship kind="outlet" name="titleField" candidateClass="UITextField"/>
             </relationships>
         </class>
         <class className="BMWDetailViewController" superclassName="UIViewController">

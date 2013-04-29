@@ -21,6 +21,8 @@
 
 @property (weak,nonatomic) IBOutlet UIPickerView *pickerView;
 
+@property (weak,nonatomic) NSString * segueID;
+
 - (BOOL)addNFLTeams;
 
 @end
