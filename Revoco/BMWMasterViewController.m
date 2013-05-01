@@ -106,7 +106,7 @@
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"Cell" forIndexPath:indexPath];
 
     BMWNote *objectAtCell = [objects objectAtIndex:indexPath.row];
-    cell.textLabel.text = objectAtCell.titleString;
+    cell.textLabel.text = [[objectAtCell.team1 stringByAppendingString:@" vs "] stringByAppendingString:[NSString stringWithFormat:@"%@", objectAtCell.team2]];
     return cell;
 }
 

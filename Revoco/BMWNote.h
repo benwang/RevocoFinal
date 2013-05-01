@@ -13,9 +13,14 @@
 
 @interface BMWNote : NSManagedObject
 
-@property (nonatomic, retain) NSString * titleString;
-@property (nonatomic, retain) NSString * detailString;
-@property (nonatomic, retain) BMWLocation *location;
+@property (nonatomic, retain) NSString * team1;
+@property (nonatomic, retain) NSString * team2;
 @property (nonatomic, retain) NSDate *date;
+@property (nonatomic, retain) NSString * detailString;
+@property (nonatomic, retain) NSMutableArray * images;
+@property (nonatomic, retain) NSString * team1Stats;
+@property (nonatomic, retain) NSString * team2Stats;
+@property (nonatomic, retain) NSMutableArray * twitterFeed;
+@property (nonatomic, retain) BMWLocation *location;
 
 @end

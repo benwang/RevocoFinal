@@ -9,6 +9,9 @@
 #import "BMWDetailViewController.h"
 #import "BMWCoreLocationandMapKit.h"
 
+#define kBMWBackgroundLink @"fabric_of_squares_gray.png"
+
+
 @interface BMWDetailViewController ()
 
 @property (strong, nonatomic) UIPopoverController *masterPopoverController;
@@ -54,10 +57,16 @@
 	// Do any additional setup after loading the view, typically from a nib.
     [self configureView];
     
-    // Getting object information from _detailItem (and it's attached BMWLocation, originially passed from AppDelegate
+    // Getting object information from _detailItem (and it's attached BMWLocation) from CoreData
+    self.detailTitle.text = [[_detailItem.team1 stringByAppendingString:@" vs "] stringByAppendingString:[NSString stringWithFormat:@"%@",_detailItem.team2]];
+    self.detailTitle.numberOfLines = 0;
+    //implemented below in IB
+    //    [self.detailTitle setAdjustsFontSizeToFitWidth:YES];
+    
     self.detailDescriptionLabel.text = [_detailItem.date description];
-    self.detailTitle.text = _detailItem.titleString;
+    self.detailDescriptionLabel.backgroundColor = [UIColor colorWithPatternImage:[UIImage imageNamed:kBMWBackgroundLink]];
     self.detailContent.text = _detailItem.detailString;
+    self.detailContent.backgroundColor = [UIColor colorWithPatternImage:[UIImage imageNamed:kBMWBackgroundLink]];
     self.detailMap.mapType = MKMapTypeStandard;
     
     location.latitude = _detailItem.location.lat;
@@ -65,7 +74,7 @@
     [self addPinToMapAtCoordinate:location];
     
     // Set background to pattern
-    UIImage *patternImage = [UIImage imageNamed:@"fabric_of_squares_gray.png"];
+    UIImage *patternImage = [UIImage imageNamed:kBMWBackgroundLink];
     self.view.backgroundColor = [UIColor colorWithPatternImage:patternImage];
 }
 

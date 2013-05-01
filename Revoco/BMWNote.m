@@ -12,9 +12,14 @@
 
 @implementation BMWNote
 
-@dynamic titleString;
-@dynamic detailString;
-@dynamic location;
+@dynamic team1;
+@dynamic team2;
 @dynamic date;
+@dynamic detailString;
+@dynamic images;
+@dynamic team1Stats;
+@dynamic team2Stats;
+@dynamic twitterFeed;
+@dynamic location;
 
 @end

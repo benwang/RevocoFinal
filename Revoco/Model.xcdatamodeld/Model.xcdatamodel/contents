@@ -8,11 +8,15 @@
     <entity name="BMWNote" representedClassName="BMWNote" syncable="YES">
         <attribute name="date" optional="YES" attributeType="Date" syncable="YES"/>
         <attribute name="detailString" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="team1" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="team1Stats" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="team2" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="team2Stats" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="titleString" optional="YES" attributeType="String" syncable="YES"/>
         <relationship name="location" optional="YES" minCount="1" maxCount="1" deletionRule="Nullify" destinationEntity="BMWLocation" inverseName="note" inverseEntity="BMWLocation" syncable="YES"/>
     </entity>
     <elements>
         <element name="BMWLocation" positionX="1609" positionY="1098" width="128" height="88"/>
-        <element name="BMWNote" positionX="1404" positionY="945" width="128" height="103"/>
+        <element name="BMWNote" positionX="1404" positionY="945" width="128" height="165"/>
     </elements>
 </model>

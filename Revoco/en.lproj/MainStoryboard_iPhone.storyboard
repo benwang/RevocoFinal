@@ -76,88 +76,91 @@
                         <subviews>
                             <label clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" text="Date" lineBreakMode="tailTruncation" minimumFontSize="10" translatesAutoresizingMaskIntoConstraints="NO" id="27">
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                <fontDescription key="fontDescription" type="system" size="system"/>
+                                <fontDescription key="fontDescription" name="TrebuchetMS" family="Trebuchet MS" pointSize="14"/>
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="N0t-wC-INl">
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Label" textAlignment="center" lineBreakMode="wordWrap" baselineAdjustment="alignBaselines" minimumScaleFactor="0.79999999999999993" adjustsLetterSpacingToFitWidth="YES" translatesAutoresizingMaskIntoConstraints="NO" id="N0t-wC-INl">
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="21" id="3Aw-b4-Qxj"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="TrebuchetMS-Bold" family="Trebuchet MS" pointSize="20"/>
+                                <color key="textColor" red="0.0" green="0.49019610879999997" blue="0.54901963470000004" alpha="1" colorSpace="deviceRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="FmH-8Y-St6">
                                 <subviews>
-                                    <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="nCF-HJ-tP6">
+                                    <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" text="Team1 stats" translatesAutoresizingMaskIntoConstraints="NO" id="nCF-HJ-tP6">
                                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                         <constraints>
                                             <constraint firstAttribute="width" constant="164" id="c7m-zm-Zhd"/>
                                             <constraint firstAttribute="height" constant="232" id="h5V-uH-kfl"/>
                                         </constraints>
-                                        <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
-                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <fontDescription key="fontDescription" name="TrebuchetMS" family="Trebuchet MS" pointSize="14"/>
                                         <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                                     </textView>
-                                    <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="aWk-SH-ZX6">
+                                    <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" text="Team2 stats" translatesAutoresizingMaskIntoConstraints="NO" id="aWk-SH-ZX6">
                                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                         <constraints>
                                             <constraint firstAttribute="width" constant="163" id="ZUm-ht-tey"/>
                                         </constraints>
-                                        <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
-                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <fontDescription key="fontDescription" name="TrebuchetMS" family="Trebuchet MS" pointSize="14"/>
                                         <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                                     </textView>
                                     <containerView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="0Pb-kd-cqc">
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                                         <constraints>
-                                            <constraint firstAttribute="height" constant="210" id="9IW-P7-TiL"/>
+                                            <constraint firstAttribute="height" constant="122" id="iSG-qM-DoN"/>
                                         </constraints>
                                         <connections>
                                             <segue destination="QaC-kU-4oq" kind="embed" id="FUg-Fp-1HI"/>
                                         </connections>
                                     </containerView>
-                                    <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Lox-B5-YxS">
+                                    <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" text="User comments" translatesAutoresizingMaskIntoConstraints="NO" id="Lox-B5-YxS">
                                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="105" id="Q2n-r6-LSx"/>
                                         </constraints>
-                                        <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
-                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <fontDescription key="fontDescription" name="TrebuchetMS" family="Trebuchet MS" pointSize="14"/>
                                         <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                                     </textView>
                                 </subviews>
                                 <constraints>
                                     <constraint firstItem="0Pb-kd-cqc" firstAttribute="leading" secondItem="FmH-8Y-St6" secondAttribute="leading" type="default" id="3Qs-hq-s6w"/>
-                                    <constraint firstItem="Lox-B5-YxS" firstAttribute="top" secondItem="FmH-8Y-St6" secondAttribute="top" type="default" id="7D3-ta-fl3"/>
-                                    <constraint firstItem="Lox-B5-YxS" firstAttribute="trailing" secondItem="FmH-8Y-St6" secondAttribute="trailing" type="default" id="AkD-RR-jUq"/>
+                                    <constraint firstAttribute="bottom" secondItem="nCF-HJ-tP6" secondAttribute="bottom" constant="-7" id="6RZ-6M-FXp"/>
                                     <constraint firstItem="nCF-HJ-tP6" firstAttribute="bottom" secondItem="aWk-SH-ZX6" secondAttribute="bottom" type="default" id="K4h-oG-dpV"/>
                                     <constraint firstItem="aWk-SH-ZX6" firstAttribute="trailing" secondItem="FmH-8Y-St6" secondAttribute="trailing" type="default" id="MNj-Od-sHh"/>
-                                    <constraint firstItem="nCF-HJ-tP6" firstAttribute="top" secondItem="FmH-8Y-St6" secondAttribute="top" constant="107" id="Mi3-OT-D9H"/>
                                     <constraint firstItem="0Pb-kd-cqc" firstAttribute="top" secondItem="FmH-8Y-St6" secondAttribute="top" constant="231" id="Ny9-H8-Hyz"/>
-                                    <constraint firstItem="Lox-B5-YxS" firstAttribute="centerX" secondItem="FmH-8Y-St6" secondAttribute="centerX" type="default" id="bgf-Fv-HPm"/>
-                                    <constraint firstAttribute="bottom" secondItem="0Pb-kd-cqc" secondAttribute="bottom" constant="-21" id="d7O-fd-UkM"/>
-                                    <constraint firstItem="Lox-B5-YxS" firstAttribute="leading" secondItem="FmH-8Y-St6" secondAttribute="leading" type="default" id="gAP-hJ-tTL"/>
+                                    <constraint firstItem="nCF-HJ-tP6" firstAttribute="top" secondItem="FmH-8Y-St6" secondAttribute="top" constant="107" id="Ohz-nO-Zej"/>
+                                    <constraint firstItem="Lox-B5-YxS" firstAttribute="leading" secondItem="FmH-8Y-St6" secondAttribute="leading" constant="20" symbolic="YES" type="default" id="UVd-EF-6Wz"/>
+                                    <constraint firstItem="nCF-HJ-tP6" firstAttribute="top" secondItem="aWk-SH-ZX6" secondAttribute="top" type="default" id="WcQ-dB-Xux"/>
+                                    <constraint firstItem="Lox-B5-YxS" firstAttribute="centerX" secondItem="FmH-8Y-St6" secondAttribute="centerX" type="default" id="iyd-kz-Jr2"/>
+                                    <constraint firstItem="Lox-B5-YxS" firstAttribute="top" secondItem="FmH-8Y-St6" secondAttribute="top" constant="1" id="ltM-MQ-dBH"/>
                                     <constraint firstItem="nCF-HJ-tP6" firstAttribute="leading" secondItem="FmH-8Y-St6" secondAttribute="leading" type="default" id="nkV-Z4-gPz"/>
-                                    <constraint firstItem="nCF-HJ-tP6" firstAttribute="top" secondItem="aWk-SH-ZX6" secondAttribute="top" type="default" id="rLk-6Q-YZi"/>
+                                    <constraint firstAttribute="trailing" secondItem="Lox-B5-YxS" secondAttribute="trailing" constant="20" symbolic="YES" type="default" id="sBZ-j9-7FN"/>
                                     <constraint firstItem="0Pb-kd-cqc" firstAttribute="trailing" secondItem="FmH-8Y-St6" secondAttribute="trailing" type="default" id="xaH-Vz-esX"/>
                                 </constraints>
                             </scrollView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
+                            <constraint firstAttribute="bottom" secondItem="FmH-8Y-St6" secondAttribute="bottom" constant="13" id="2Hl-dQ-p03"/>
+                            <constraint firstAttribute="trailing" secondItem="N0t-wC-INl" secondAttribute="trailing" constant="20" symbolic="YES" type="default" id="BdB-QQ-cn2"/>
                             <constraint firstItem="27" firstAttribute="leading" secondItem="22" secondAttribute="leading" constant="20" symbolic="YES" type="default" id="Cus-tf-xr1"/>
-                            <constraint firstItem="FmH-8Y-St6" firstAttribute="bottom" secondItem="22" secondAttribute="bottom" type="default" id="D8d-d8-DsE"/>
+                            <constraint firstItem="N0t-wC-INl" firstAttribute="leading" secondItem="22" secondAttribute="leading" constant="20" symbolic="YES" type="default" id="FDy-Zi-fVl"/>
+                            <constraint firstItem="27" firstAttribute="top" secondItem="22" secondAttribute="top" constant="45" id="Fbg-jo-RSR"/>
                             <constraint firstItem="N0t-wC-INl" firstAttribute="top" secondItem="22" secondAttribute="top" constant="20" symbolic="YES" type="default" id="aQ1-lh-H5x"/>
-                            <constraint firstItem="27" firstAttribute="top" secondItem="22" secondAttribute="top" constant="58" id="bPj-SB-TZa"/>
                             <constraint firstAttribute="trailing" secondItem="27" secondAttribute="trailing" constant="20" symbolic="YES" type="default" id="i0I-nz-0Fd"/>
-                            <constraint firstItem="FmH-8Y-St6" firstAttribute="top" secondItem="27" secondAttribute="bottom" constant="8" symbolic="YES" type="default" id="sZZ-mU-6wb"/>
+                            <constraint firstItem="FmH-8Y-St6" firstAttribute="top" secondItem="27" secondAttribute="bottom" constant="8" symbolic="YES" type="default" id="qnB-hY-4jh"/>
                             <constraint firstItem="FmH-8Y-St6" firstAttribute="trailing" secondItem="22" secondAttribute="trailing" type="default" id="vYL-GO-vTW"/>
-                            <constraint firstItem="27" firstAttribute="centerX" secondItem="N0t-wC-INl" secondAttribute="centerX" type="default" id="wPp-xn-pOf"/>
                             <constraint firstItem="FmH-8Y-St6" firstAttribute="leading" secondItem="22" secondAttribute="leading" type="default" id="yzo-dw-JZm"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="Game Details" id="26"/>
                     <connections>
+                        <outlet property="detailContent" destination="Lox-B5-YxS" id="6YE-jK-YKh"/>
                         <outlet property="detailDescriptionLabel" destination="27" id="28"/>
+                        <outlet property="detailTitle" destination="N0t-wC-INl" id="nNX-ti-HLa"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="23" sceneMemberID="firstResponder"/>
@@ -285,7 +288,7 @@
             <objects>
                 <viewController id="QaC-kU-4oq" sceneMemberID="viewController">
                     <view key="view" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="1JT-gf-7dd">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="210"/>
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="122"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" translatesAutoresizingMaskIntoConstraints="NO" id="5Ej-bH-WzL">
@@ -293,6 +296,9 @@
                                 <constraints>
                                     <constraint firstAttribute="height" constant="210" id="fks-am-Kq8"/>
                                 </constraints>
+                                <mapView key="tableFooterView" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" id="xg6-1P-8sC">
+                                    <rect key="frame" x="0.0" y="110" width="320" height="128"/>
+                                </mapView>
                                 <prototypes>
                                     <tableViewCell contentMode="scaleToFill" selectionStyle="blue" indentationWidth="10" id="Ak4-cW-6hf">
                                         <rect key="frame" x="0.0" y="22" width="320" height="44"/>
@@ -303,22 +309,23 @@
                                             <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                         </view>
                                     </tableViewCell>
+                                    <tableViewCell contentMode="scaleToFill" selectionStyle="blue" indentationWidth="10" id="WGX-eX-ugM">
+                                        <rect key="frame" x="0.0" y="66" width="320" height="44"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                                            <rect key="frame" x="0.0" y="0.0" width="320" height="43"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                        </view>
+                                    </tableViewCell>
                                 </prototypes>
                             </tableView>
-                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="xg6-1P-8sC">
-                                <constraints>
-                                    <constraint firstAttribute="width" constant="240" id="QlW-ba-ozA"/>
-                                    <constraint firstAttribute="height" constant="128" id="Zmb-aX-6Rd"/>
-                                </constraints>
-                            </mapView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="xg6-1P-8sC" firstAttribute="bottom" secondItem="1JT-gf-7dd" secondAttribute="bottom" type="default" id="3Pk-VS-LQK"/>
                             <constraint firstItem="5Ej-bH-WzL" firstAttribute="leading" secondItem="1JT-gf-7dd" secondAttribute="leading" type="default" id="99B-pO-sCG"/>
                             <constraint firstItem="5Ej-bH-WzL" firstAttribute="top" secondItem="1JT-gf-7dd" secondAttribute="top" constant="-35" id="K1Z-qV-5Ii"/>
                             <constraint firstItem="5Ej-bH-WzL" firstAttribute="trailing" secondItem="1JT-gf-7dd" secondAttribute="trailing" type="default" id="LDZ-gu-Ukc"/>
-                            <constraint firstItem="xg6-1P-8sC" firstAttribute="leading" secondItem="1JT-gf-7dd" secondAttribute="leading" type="default" id="nYr-HP-hoq"/>
                         </constraints>
                     </view>
                     <toolbarItems/>
@@ -369,7 +376,6 @@
                 <relationship kind="outlet" name="Team2Label" candidateClass="UILabel"/>
                 <relationship kind="outlet" name="contentField" candidateClass="UITextView"/>
                 <relationship kind="outlet" name="gestureRecognizer" candidateClass="UITapGestureRecognizer"/>
-                <relationship kind="outlet" name="titleField" candidateClass="UITextField"/>
             </relationships>
         </class>
         <class className="BMWDetailViewController" superclassName="UIViewController">

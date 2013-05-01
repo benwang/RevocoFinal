@@ -14,12 +14,10 @@
 @interface BMWDetailViewController : UIViewController <UISplitViewControllerDelegate>
 {
     CLLocationCoordinate2D location;
-//    CLLocationDegrees latitude;
-//    CLLocationDegrees longitude;
 }
 
 @property (strong, nonatomic) BMWNote *detailItem;
-@property (weak, nonatomic) IBOutlet UILabel *detailTitle;
+@property (strong, nonatomic) IBOutlet UILabel *detailTitle;
 @property (weak, nonatomic) IBOutlet UITextView *detailContent;
 @property (weak, nonatomic) IBOutlet UILabel *detailDescriptionLabel;
 @property (strong, nonatomic) IBOutlet MKMapView *detailMap;

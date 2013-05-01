@@ -10,7 +10,7 @@
 
 @implementation BMWCoreLocationandMapKit
 
-#pragma mark Singleton Methods
+#pragma mark - Singleton Methods
 
 // access by declaring: BMWCoreLocationandMapKit *sharedManager = [BMWCoreLocationandMapKit sharedManager];
 + (id)sharedManager {
@@ -33,10 +33,20 @@
 
 - (id) init {
     if (self = [super init]) {
-        _mapView = [[MKMapView alloc] init];
-        _locationManager = [[CLLocationManager alloc] init];
+        self.mapView = [[MKMapView alloc] init];
+        self.locationManager = [[CLLocationManager alloc] init];
     }
     return self;
+}
+
+- (void) stopUpdating
+{
+    [self.locationManager stopMonitoringSignificantLocationChanges];
+}
+
+- (void) resumeUpdating
+{
+    [self.locationManager startMonitoringSignificantLocationChanges];
 }
 
 //Moved this to BMWDetailViewController
@@ -45,13 +55,13 @@
 //    //this is the red pin
 //    MKPointAnnotation *pin = [[MKPointAnnotation alloc] init];
 //    pin.coordinate = location.coordinate;
-//    
+//
 //    //Labels, with latitude/longitude markings to two decimal places
 //    pin.title = @"Note created here";
 //    float lat = location.coordinate.latitude;
 //    float lon = location.coordinate.longitude;
 //    pin.subtitle = [NSString stringWithFormat: @"lat: ~%f, lon: ~%f", lat, lon];
-//    
+//
 //    //Add pin to map, puts center of screen at the pin
 //    [_mapView addAnnotation:pin];
 //    MKCoordinateRegion region;
@@ -65,16 +75,5 @@
 //    region.center = newCenter;
 //    [_mapView setRegion:region animated:YES];
 //}
-
-- (void) stopUpdating
-{
-    [_locationManager stopMonitoringSignificantLocationChanges];
-}
-
-- (void) resumeUpdating
-{
-    [_locationManager startMonitoringSignificantLocationChanges];
-}
-
 
 @end

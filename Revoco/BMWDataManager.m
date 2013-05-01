@@ -21,7 +21,7 @@
 
 @implementation BMWDataManager
 
- - (BOOL)addNoteContentWithDate:(NSDate *)date Title:(NSString *)titleText Detail:(NSString *)details Coordinate:(CLLocationCoordinate2D) coordinate
+- (BOOL)addNoteContentWithDate:(NSDate *)date Team1:(NSString *)team1 Team2:(NSString *)team2 Detail:(NSString *)details T1Stats:(NSString *)t1stats T2Stats:(NSString *)t2stats Coordinate:(CLLocationCoordinate2D) coordinate
 {
     NSManagedObjectContext *context = [self managedObjectContext];
     BMWNote *note = [NSEntityDescription insertNewObjectForEntityForName:kBMWEntityName inManagedObjectContext:context];
@@ -29,9 +29,11 @@
     
     //Setting datapoints
     note.date = date;
-    note.titleString = titleText;
+    note.team1 = team1;
+    note.team2 = team2;
     note.detailString = details;
-    
+    note.team1Stats = t1stats;
+    note.team2Stats = t2stats;
     location.lat = coordinate.latitude;
     location.lon = coordinate.longitude;
     note.location = location;
@@ -73,12 +75,15 @@
 }
 
 //In the future, I may want to modify this to allow for edits
-- (BOOL)updateNote:(BMWNote *)note Location:(BMWLocation *)location WithDate:(NSDate *)date Title:(NSString *)titleText Detail:(NSString *)details Coordinate:(CLLocationCoordinate2D)coordinate
+- (BOOL)updateNote:(BMWNote *)note Location:(BMWLocation *)location WithDate:(NSDate *)date Team1:(NSString *)team1 Team2:(NSString *)team2 Detail:(NSString *)details T1Stats:(NSString *)t1stats T2Stats:(NSString *)t2stats Coordinate:(CLLocationCoordinate2D) coordinate
 {
     NSManagedObjectContext *context = [self managedObjectContext];
     note.date = date;
-    note.titleString = titleText;
+    note.team1 = team1;
+    note.team2 = team2;
     note.detailString = details;
+    note.team1Stats = t1stats;
+    note.team2Stats = t2stats;
     location.lat = coordinate.latitude;
     location.lon = coordinate.longitude;
     NSError *error;
