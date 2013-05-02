@@ -30,7 +30,6 @@
     self.navigationController.navigationBarHidden = NO;
     
     //Implement Done button
-    
     UIBarButtonItem *doneButton = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemDone target:self action:@selector(returnText)];
     self.navigationItem.rightBarButtonItem = doneButton;
      

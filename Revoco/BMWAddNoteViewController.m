@@ -34,6 +34,12 @@
 {
     [super viewDidLoad];
     self.navigationController.navigationBarHidden = NO;
+    
+    //Implement Done button    
+    UIBarButtonItem *doneButton = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemDone target:self action:@selector(returnText)];
+    self.navigationItem.rightBarButtonItem = doneButton;
+
+    
     appDelegate = (BMWAppDelegate *)[[UIApplication sharedApplication] delegate];
     /*
 //Mapnotes designation
@@ -77,9 +83,10 @@
     [self dismissViewControllerAnimated:YES completion:nil];
 }
 
-- (IBAction)doneWithModalViewController:(id)sender
+//- (IBAction)doneWithModalViewController:(id)sender
+- (void) returnText
 {
-    if (appDelegate.team1 == nil || [appDelegate.team1 isEqual: @""] || appDelegate.team2 == nil || [appDelegate.team2 isEqual: @""])
+    if (appDelegate.team1 == nil || [appDelegate.team1 isEqual: @"Team1"] || appDelegate.team2 == nil || [appDelegate.team2 isEqual: @"Team2"])
     {
         [self.missingTeamAlertView show];
     } else
@@ -107,8 +114,8 @@
     NSLog(status ? @"Yes" : @"No");
     
     //Reset team1/team2 vars to set label for next time you add a note
-    appDelegate.team1 = @"";
-    appDelegate.team2 = @"";
+    appDelegate.team1 = @"Team1";
+    appDelegate.team2 = @"Team2";
     
     [self.navigationController popViewControllerAnimated:YES];
 //    [self dismissViewControllerAnimated:YES completion:nil];

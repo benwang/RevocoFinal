@@ -8,11 +8,11 @@
          ignoreCount = "0"
          continueAfterRunningActions = "No"
          filePath = "Revoco/BMWFindTeamViewController.m"
-         timestampString = "388878688.05291"
+         timestampString = "389153863.58619"
          startingColumnNumber = "9223372036854775807"
          endingColumnNumber = "9223372036854775807"
-         startingLineNumber = "107"
-         endingLineNumber = "107"
+         startingLineNumber = "106"
+         endingLineNumber = "106"
          landmarkName = "-pickerView:titleForRow:forComponent:"
          landmarkType = "5">
       </FileBreakpoint>
@@ -21,11 +21,11 @@
          ignoreCount = "0"
          continueAfterRunningActions = "No"
          filePath = "Revoco/BMWFindTeamViewController.m"
-         timestampString = "388878688.05291"
+         timestampString = "389153863.58619"
          startingColumnNumber = "9223372036854775807"
          endingColumnNumber = "9223372036854775807"
-         startingLineNumber = "106"
-         endingLineNumber = "106"
+         startingLineNumber = "105"
+         endingLineNumber = "105"
          landmarkName = "-pickerView:titleForRow:forComponent:"
          landmarkType = "5">
       </FileBreakpoint>
@@ -47,11 +47,11 @@
          ignoreCount = "0"
          continueAfterRunningActions = "No"
          filePath = "Revoco/BMWFindTeamViewController.m"
-         timestampString = "388878688.05291"
+         timestampString = "389153863.58619"
          startingColumnNumber = "9223372036854775807"
          endingColumnNumber = "9223372036854775807"
-         startingLineNumber = "51"
-         endingLineNumber = "51"
+         startingLineNumber = "50"
+         endingLineNumber = "50"
          landmarkName = "-returnText"
          landmarkType = "5">
       </FileBreakpoint>
@@ -60,11 +60,11 @@
          ignoreCount = "0"
          continueAfterRunningActions = "No"
          filePath = "Revoco/BMWAddNoteViewController.m"
-         timestampString = "388892687.70355"
+         timestampString = "389153863.58619"
          startingColumnNumber = "9223372036854775807"
          endingColumnNumber = "9223372036854775807"
-         startingLineNumber = "42"
-         endingLineNumber = "42"
+         startingLineNumber = "48"
+         endingLineNumber = "48"
          landmarkName = "-viewDidLoad"
          landmarkType = "5">
       </FileBreakpoint>
@@ -73,11 +73,11 @@
          ignoreCount = "0"
          continueAfterRunningActions = "No"
          filePath = "Revoco/BMWAddNoteViewController.m"
-         timestampString = "389062384.444595"
+         timestampString = "389153863.58619"
          startingColumnNumber = "9223372036854775807"
          endingColumnNumber = "9223372036854775807"
-         startingLineNumber = "59"
-         endingLineNumber = "59"
+         startingLineNumber = "65"
+         endingLineNumber = "65"
          landmarkName = "-viewDidAppear:"
          landmarkType = "5">
       </FileBreakpoint>
@@ -99,11 +99,11 @@
          ignoreCount = "0"
          continueAfterRunningActions = "No"
          filePath = "Revoco/BMWAddNoteViewController.m"
-         timestampString = "389062384.444595"
+         timestampString = "389158551.520443"
          startingColumnNumber = "9223372036854775807"
          endingColumnNumber = "9223372036854775807"
-         startingLineNumber = "122"
-         endingLineNumber = "122"
+         startingLineNumber = "129"
+         endingLineNumber = "129"
          landmarkName = "-viewTapped:"
          landmarkType = "5">
       </FileBreakpoint>
@@ -145,6 +145,45 @@
          endingLineNumber = "16"
          landmarkName = "team1"
          landmarkType = "19">
+      </FileBreakpoint>
+      <FileBreakpoint
+         shouldBeEnabled = "No"
+         ignoreCount = "0"
+         continueAfterRunningActions = "No"
+         filePath = "Revoco/BMWDetailOverflowController.m"
+         timestampString = "389136901.363301"
+         startingColumnNumber = "9223372036854775807"
+         endingColumnNumber = "9223372036854775807"
+         startingLineNumber = "18"
+         endingLineNumber = "18"
+         landmarkName = "-viewDidLoad"
+         landmarkType = "5">
+      </FileBreakpoint>
+      <FileBreakpoint
+         shouldBeEnabled = "No"
+         ignoreCount = "0"
+         continueAfterRunningActions = "No"
+         filePath = "Revoco/BMWMasterViewController.m"
+         timestampString = "389136939.930194"
+         startingColumnNumber = "9223372036854775807"
+         endingColumnNumber = "9223372036854775807"
+         startingLineNumber = "156"
+         endingLineNumber = "156"
+         landmarkName = "-prepareForSegue:sender:"
+         landmarkType = "5">
+      </FileBreakpoint>
+      <FileBreakpoint
+         shouldBeEnabled = "No"
+         ignoreCount = "0"
+         continueAfterRunningActions = "No"
+         filePath = "Revoco/BMWAddNoteViewController.m"
+         timestampString = "389158551.520443"
+         startingColumnNumber = "9223372036854775807"
+         endingColumnNumber = "9223372036854775807"
+         startingLineNumber = "89"
+         endingLineNumber = "89"
+         landmarkName = "-returnText"
+         landmarkType = "5">
       </FileBreakpoint>
    </FileBreakpoints>
    <ExceptionBreakpoints>

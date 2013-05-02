@@ -26,6 +26,8 @@
 		2565E2B9172CC6B60044427F /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 2565E2A4172CC6B60044427F /* main.m */; };
 		2565E2BA172CC6B60044427F /* Model.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 2565E2A5172CC6B60044427F /* Model.xcdatamodeld */; };
 		2565E2FA172CD1280044427F /* NFL_logo.png in Resources */ = {isa = PBXBuildFile; fileRef = 2565E2F9172CD1280044427F /* NFL_logo.png */; };
+		2565E2FD1730A7880044427F /* BMWDetailOverflowController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2565E2FC1730A7870044427F /* BMWDetailOverflowController.m */; };
+		2565E300173228CC0044427F /* Social.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2565E2FF173228CB0044427F /* Social.framework */; };
 		2581F2B517278D2300279C07 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2581F2B417278D2300279C07 /* UIKit.framework */; };
 		2581F2B717278D2300279C07 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2581F2B617278D2300279C07 /* Foundation.framework */; };
 		2581F2B917278D2300279C07 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2581F2B817278D2300279C07 /* CoreGraphics.framework */; };
@@ -81,6 +83,9 @@
 		2565E2A7172CC6B60044427F /* Revoco-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "Revoco-Info.plist"; path = "Revoco/Revoco-Info.plist"; sourceTree = "<group>"; };
 		2565E2A8172CC6B60044427F /* Revoco-Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "Revoco-Prefix.pch"; path = "Revoco/Revoco-Prefix.pch"; sourceTree = "<group>"; };
 		2565E2F9172CD1280044427F /* NFL_logo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = NFL_logo.png; path = Revoco/NFL_logo.png; sourceTree = "<group>"; };
+		2565E2FB1730A7870044427F /* BMWDetailOverflowController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = BMWDetailOverflowController.h; path = Revoco/BMWDetailOverflowController.h; sourceTree = "<group>"; };
+		2565E2FC1730A7870044427F /* BMWDetailOverflowController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = BMWDetailOverflowController.m; path = Revoco/BMWDetailOverflowController.m; sourceTree = "<group>"; };
+		2565E2FF173228CB0044427F /* Social.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Social.framework; path = System/Library/Frameworks/Social.framework; sourceTree = SDKROOT; };
 		2581F2B117278D2300279C07 /* Revoco.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Revoco.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		2581F2B417278D2300279C07 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		2581F2B617278D2300279C07 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -101,6 +106,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2565E300173228CC0044427F /* Social.framework in Frameworks */,
 				2581F35C1727911400279C07 /* MapKit.framework in Frameworks */,
 				2581F35A1727910800279C07 /* CoreLocation.framework in Frameworks */,
 				2581F2B517278D2300279C07 /* UIKit.framework in Frameworks */,
@@ -146,6 +152,8 @@
 				2565E28C172CC6B60044427F /* BMWCoreLocationandMapKit.m */,
 				2565E28D172CC6B60044427F /* BMWDataManager.h */,
 				2565E28E172CC6B60044427F /* BMWDataManager.m */,
+				2565E2FB1730A7870044427F /* BMWDetailOverflowController.h */,
+				2565E2FC1730A7870044427F /* BMWDetailOverflowController.m */,
 				2565E28F172CC6B60044427F /* BMWDetailViewController.h */,
 				2565E290172CC6B60044427F /* BMWDetailViewController.m */,
 				2565E291172CC6B60044427F /* BMWFindTeamViewController.h */,
@@ -184,6 +192,7 @@
 		2581F2B317278D2300279C07 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				2565E2FF173228CB0044427F /* Social.framework */,
 				2581F35B1727911400279C07 /* MapKit.framework */,
 				2581F3591727910800279C07 /* CoreLocation.framework */,
 				2581F2B417278D2300279C07 /* UIKit.framework */,
@@ -339,6 +348,7 @@
 				2565E2B1172CC6B60044427F /* BMWNote.m in Sources */,
 				2565E2B9172CC6B60044427F /* main.m in Sources */,
 				2565E2BA172CC6B60044427F /* Model.xcdatamodeld in Sources */,
+				2565E2FD1730A7880044427F /* BMWDetailOverflowController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

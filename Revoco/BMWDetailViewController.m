@@ -67,11 +67,11 @@
     self.detailDescriptionLabel.backgroundColor = [UIColor colorWithPatternImage:[UIImage imageNamed:kBMWBackgroundLink]];
     self.detailContent.text = _detailItem.detailString;
     self.detailContent.backgroundColor = [UIColor colorWithPatternImage:[UIImage imageNamed:kBMWBackgroundLink]];
-    self.detailMap.mapType = MKMapTypeStandard;
-    
-    location.latitude = _detailItem.location.lat;
-    location.longitude = _detailItem.location.lon;
-    [self addPinToMapAtCoordinate:location];
+//    self.detailMap.mapType = MKMapTypeStandard;
+//    
+//    location.latitude = _detailItem.location.lat;
+//    location.longitude = _detailItem.location.lon;
+//    [self addPinToMapAtCoordinate:location];
     
     // Set background to pattern
     UIImage *patternImage = [UIImage imageNamed:kBMWBackgroundLink];
@@ -85,31 +85,31 @@
 }
 
 #pragma mark - Map commands
-- (void) addPinToMapAtCoordinate:(CLLocationCoordinate2D) coordinate
-{
-    //this is the red pin
-    MKPointAnnotation *pin = [[MKPointAnnotation alloc] init];
-    pin.coordinate = coordinate;
-    
-    //Labels, with latitude/longitude markings to two decimal places
-    pin.title = @"Game watched here";
-    float lat = coordinate.latitude;
-    float lon = coordinate.longitude;
-    pin.subtitle = [NSString stringWithFormat: @"lat: ~%f, lon: ~%f", lat, lon];
-    
-    //Add pin to map, puts center of screen at the pin
-    [_detailMap addAnnotation:pin];
-    MKCoordinateRegion region;
-    MKCoordinateSpan span;
-    span.latitudeDelta = 0.01;
-    span.longitudeDelta = 0.01;
-//    CLLocationCoordinate2D newCenter;
-//    newCenter.latitude = location.coordinate.latitude;
-//    newCenter.longitude = location.coordinate.longitude;
-    region.span = span;
-    region.center = coordinate;//no longer newCenter
-    [_detailMap setRegion:region animated:YES];
-}
+//- (void) addPinToMapAtCoordinate:(CLLocationCoordinate2D) coordinate
+//{
+//    //this is the red pin
+//    MKPointAnnotation *pin = [[MKPointAnnotation alloc] init];
+//    pin.coordinate = coordinate;
+//    
+//    //Labels, with latitude/longitude markings to two decimal places
+//    pin.title = @"Game watched here";
+//    float lat = coordinate.latitude;
+//    float lon = coordinate.longitude;
+//    pin.subtitle = [NSString stringWithFormat: @"lat: ~%f, lon: ~%f", lat, lon];
+//    
+//    //Add pin to map, puts center of screen at the pin
+//    [_detailMap addAnnotation:pin];
+//    MKCoordinateRegion region;
+//    MKCoordinateSpan span;
+//    span.latitudeDelta = 0.01;
+//    span.longitudeDelta = 0.01;
+////    CLLocationCoordinate2D newCenter;
+////    newCenter.latitude = location.coordinate.latitude;
+////    newCenter.longitude = location.coordinate.longitude;
+//    region.span = span;
+//    region.center = coordinate;//no longer newCenter
+//    [_detailMap setRegion:region animated:YES];
+//}
 
 #pragma mark - Split view
 
@@ -125,6 +125,15 @@
     // Called when the view is shown again in the split view, invalidating the button and popover controller.
     [self.navigationItem setLeftBarButtonItem:nil animated:YES];
     self.masterPopoverController = nil;
+}
+
+-(void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
+{
+    if ([[segue identifier] isEqualToString:@"Container"])
+    {
+        BMWNote *note = self.detailItem;
+        [[segue destinationViewController] setDetailItem:note];
+    }
 }
 
 @end
