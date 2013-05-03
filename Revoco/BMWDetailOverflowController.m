@@ -17,7 +17,7 @@
 //    [self configureView];
     
     // Getting object information from _detailItem (and it's attached BMWLocation) from CoreData
-    self.detailMap.mapType = MKMapTypeStandard;
+    self.detailMap.mapType = MKMapTypeHybrid;
     
     location.latitude = self.detailItem.location.lat;
     location.longitude = self.detailItem.location.lon;

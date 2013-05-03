@@ -57,7 +57,7 @@
                             <outlet property="delegate" destination="12" id="15"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" title="Games" id="36"/>
+                    <navigationItem key="navigationItem" title="Revoco" id="36"/>
                     <connections>
                         <segue destination="Hur-KY-JIf" kind="push" identifier="addGame" id="bUo-23-sYO"/>
                     </connections>
@@ -93,7 +93,7 @@
                                     <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" text="Team1 stats" translatesAutoresizingMaskIntoConstraints="NO" id="nCF-HJ-tP6">
                                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                         <constraints>
-                                            <constraint firstAttribute="width" constant="164" id="c7m-zm-Zhd"/>
+                                            <constraint firstAttribute="width" constant="164" id="FOT-km-Hao"/>
                                             <constraint firstAttribute="height" constant="61" id="evG-xt-4Cr"/>
                                         </constraints>
                                         <fontDescription key="fontDescription" name="TrebuchetMS" family="Trebuchet MS" pointSize="14"/>
@@ -124,20 +124,42 @@
                                         <fontDescription key="fontDescription" name="TrebuchetMS" family="Trebuchet MS" pointSize="14"/>
                                         <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                                     </textView>
+                                    <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Stats:" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fBX-Fh-pJR">
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="46" id="2La-Lt-j5p"/>
+                                            <constraint firstAttribute="height" constant="21" id="vb7-Ts-iNA"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" name="TrebuchetMS-Bold" family="Trebuchet MS" pointSize="17"/>
+                                        <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Twitter Feed:" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="VQd-0R-dcJ">
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="21" id="uCX-f3-ayP"/>
+                                            <constraint firstAttribute="width" constant="112" id="xvt-o8-SfD"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" name="TrebuchetMS-Bold" family="Trebuchet MS" pointSize="17"/>
+                                        <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
                                 </subviews>
                                 <constraints>
                                     <constraint firstItem="0Pb-kd-cqc" firstAttribute="leading" secondItem="FmH-8Y-St6" secondAttribute="leading" type="default" id="3Qs-hq-s6w"/>
                                     <constraint firstItem="nCF-HJ-tP6" firstAttribute="top" secondItem="aWk-SH-ZX6" secondAttribute="top" type="default" id="G6h-tG-5Y8"/>
+                                    <constraint firstItem="fBX-Fh-pJR" firstAttribute="centerX" secondItem="Lox-B5-YxS" secondAttribute="centerX" type="default" id="L0v-8A-wb8"/>
                                     <constraint firstItem="aWk-SH-ZX6" firstAttribute="trailing" secondItem="FmH-8Y-St6" secondAttribute="trailing" type="default" id="MNj-Od-sHh"/>
+                                    <constraint firstItem="fBX-Fh-pJR" firstAttribute="centerX" secondItem="VQd-0R-dcJ" secondAttribute="centerX" type="default" id="TiF-5h-rrc"/>
                                     <constraint firstItem="Lox-B5-YxS" firstAttribute="leading" secondItem="FmH-8Y-St6" secondAttribute="leading" constant="20" symbolic="YES" type="default" id="UVd-EF-6Wz"/>
                                     <constraint firstItem="nCF-HJ-tP6" firstAttribute="top" secondItem="FmH-8Y-St6" secondAttribute="top" constant="45" id="Wvh-Bc-qyU"/>
                                     <constraint firstItem="Lox-B5-YxS" firstAttribute="top" secondItem="FmH-8Y-St6" secondAttribute="top" constant="1" id="X89-QY-Q7d"/>
-                                    <constraint firstItem="0Pb-kd-cqc" firstAttribute="bottom" secondItem="FmH-8Y-St6" secondAttribute="bottom" type="default" id="bf7-du-Fed"/>
-                                    <constraint firstItem="aWk-SH-ZX6" firstAttribute="bottom" secondItem="nCF-HJ-tP6" secondAttribute="bottom" type="default" id="egZ-Zh-4Gk"/>
-                                    <constraint firstItem="Lox-B5-YxS" firstAttribute="centerX" secondItem="FmH-8Y-St6" secondAttribute="centerX" type="default" id="iyd-kz-Jr2"/>
+                                    <constraint firstAttribute="bottom" secondItem="0Pb-kd-cqc" secondAttribute="bottom" constant="-9" id="j61-D8-Uuh"/>
+                                    <constraint firstItem="0Pb-kd-cqc" firstAttribute="top" secondItem="nCF-HJ-tP6" secondAttribute="bottom" constant="8" symbolic="YES" type="default" id="lSn-5e-eJt"/>
+                                    <constraint firstItem="VQd-0R-dcJ" firstAttribute="top" secondItem="FmH-8Y-St6" secondAttribute="top" constant="100" id="nOp-kH-yv9"/>
                                     <constraint firstItem="nCF-HJ-tP6" firstAttribute="leading" secondItem="FmH-8Y-St6" secondAttribute="leading" type="default" id="nkV-Z4-gPz"/>
+                                    <constraint firstItem="fBX-Fh-pJR" firstAttribute="top" secondItem="FmH-8Y-St6" secondAttribute="top" constant="35" id="pnh-0e-NhA"/>
                                     <constraint firstAttribute="trailing" secondItem="Lox-B5-YxS" secondAttribute="trailing" constant="20" symbolic="YES" type="default" id="sBZ-j9-7FN"/>
-                                    <constraint firstItem="0Pb-kd-cqc" firstAttribute="top" secondItem="FmH-8Y-St6" secondAttribute="top" constant="105" id="tU9-GI-ayG"/>
+                                    <constraint firstItem="fBX-Fh-pJR" firstAttribute="centerX" secondItem="FmH-8Y-St6" secondAttribute="centerX" type="default" id="vsQ-pH-efX"/>
+                                    <constraint firstItem="0Pb-kd-cqc" firstAttribute="top" secondItem="aWk-SH-ZX6" secondAttribute="bottom" constant="8" symbolic="YES" type="default" id="xKq-vp-TtD"/>
                                     <constraint firstItem="0Pb-kd-cqc" firstAttribute="trailing" secondItem="FmH-8Y-St6" secondAttribute="trailing" type="default" id="xaH-Vz-esX"/>
                                 </constraints>
                             </scrollView>

@@ -8,6 +8,7 @@
 
 #import "BMWAddNoteViewController.h"
 #import "BMWFindTeamViewController.h"
+#define kBMWESPNAPIToken @"jpdb9wzbdd4ezqgr5asc3d3x"
 
 @interface BMWAddNoteViewController ()
 {
@@ -99,10 +100,9 @@
         location.latitude = sharedManager.locationManager.location.coordinate.latitude;
         location.longitude = sharedManager.locationManager.location.coordinate.longitude;
         
-        //Getting stats from ESPN API
-        self.team1Stats = @"Team1 Stats:";
-        self.team2Stats = @"Team2 Stats:";
-        
+        //Getting stats from http://www.pro-football-reference.com/
+        //sets self.team1Stats and self.team2Stats to add to CoreData
+        [self parseNFLCSV];        
         
         //Put data into back end
         BOOL status = [dataManager addNoteContentWithDate:self.date Team1:self.Team1Label.text Team2:self.Team2Label.text Detail:self.contentField.text T1Stats:self.team1Stats T2Stats:self.team2Stats Coordinate:location];
@@ -115,6 +115,66 @@
         [self.navigationController popViewControllerAnimated:YES];
         //    [self dismissViewControllerAnimated:YES completion:nil];
     }
+}
+
+#pragma mark - Interaction with Stats API
+- (void) parseNFLCSV
+{    
+    //Read all text from file
+    NSString* filePath = @"nfl2012";
+    NSString* fileRoot = [[NSBundle mainBundle] pathForResource:filePath ofType:@"csv"];
+    
+    NSString* fileContents = [NSString stringWithContentsOfFile:fileRoot encoding:NSUTF8StringEncoding error:NULL];
+//    NSString *absoluteURL = @"n"
+//    NSURL *url = [NSURL URLWithString:absoluteURL];
+//    NSString *fileContents = [[NSString alloc] initWithContentsOfURL:url];
+    NSLog(@"%@",fileContents);
+    
+    //Separate by newline
+    NSArray* allLinedStrings = [fileContents componentsSeparatedByCharactersInSet: [NSCharacterSet newlineCharacterSet]];
+    NSLog(@"%@",[allLinedStrings objectAtIndex:0]);
+    
+    NSString* team1Score;
+    NSString* team1Yards;
+    NSString* team1Turnovers;
+    NSString* team2Score;
+    NSString* team2Yards;
+    NSString* team2Turnovers;
+    
+    //Manually go through each line and collect relevant stats if team is mentioned; this will run through the file and find the stats for the most recent game played
+    for (int i = 0; i < allLinedStrings.count && [[allLinedStrings objectAtIndex:i] length] != 0; i++)
+    {
+        NSArray *list = [[allLinedStrings objectAtIndex:i] componentsSeparatedByString:@","];
+        if ([[list objectAtIndex:4] isEqualToString:appDelegate.team1])
+        {
+            team1Score = [list objectAtIndex:7];
+            team1Yards = [list objectAtIndex:9];
+            team1Turnovers = [list objectAtIndex:10];
+        } else if ([[list objectAtIndex:6] isEqualToString:appDelegate.team1])
+        {
+            team1Score = [list objectAtIndex:8];
+            team1Yards = [list objectAtIndex:11];
+            team1Turnovers = [list objectAtIndex:12];
+        }
+        if ([[list objectAtIndex:4] isEqualToString:appDelegate.team2])
+        {
+            team2Score = [list objectAtIndex:7];
+            team2Yards = [list objectAtIndex:9];
+            team2Turnovers = [list objectAtIndex:10];
+        } else if ([[list objectAtIndex:6] isEqualToString:appDelegate.team2])
+        {
+            team2Score = [list objectAtIndex:8];
+            team2Yards = [list objectAtIndex:11];
+            team2Turnovers = [list objectAtIndex:12];
+        } 
+    }
+    
+    //Prepare return values
+    NSString *stats1 = [NSString stringWithFormat:@"Score: %@\rYards: %@\rTurnovers: %@", team1Score, team1Yards, team1Turnovers];
+    NSString *stats2 = [NSString stringWithFormat:@"Score: %@\rYards: %@\rTurnovers: %@", team2Score, team2Yards, team2Turnovers];
+    
+    self.team1Stats = stats1;
+    self.team2Stats = stats2;
 }
 
 #pragma mark - Gesture Recognizer Methods

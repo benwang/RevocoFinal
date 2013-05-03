@@ -86,6 +86,7 @@
 }
 
 #pragma mark - Map commands
+//Move into DetailOverflowController
 //- (void) addPinToMapAtCoordinate:(CLLocationCoordinate2D) coordinate
 //{
 //    //this is the red pin
