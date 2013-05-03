@@ -108,7 +108,8 @@
     NSLog(@"%@",self.Team2Label.text);
     NSLog(@"%@", self.contentField.text);
         
-    //TODO: Make sure dataManager gets updated with Photos Array and Twitter Array
+    
+        
 //    BOOL status = [dataManager addNoteContentWithDate:self.date Title:self.titleField.text Detail:self.contentField.text Coordinate:location];
     BOOL status = [dataManager addNoteContentWithDate:self.date Team1:self.Team1Label.text Team2:self.Team2Label.text Detail:self.contentField.text T1Stats:@" " T2Stats:@" " Coordinate:location];
     NSLog(status ? @"Yes" : @"No");

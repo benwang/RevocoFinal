@@ -161,11 +161,43 @@
 
 }
 
+//I need to move this somewhere else so that I don't reload the dictionary on every view (maybe move to appDelegate to be every time I open app).
+//Better yet, I need to figure out how to put this on the backend, so that it's only done once when app first opened
 - (void)populateTeamNametoTwitterHandle
 {
     self.teamNametoTwitterHandle = [[NSMutableDictionary alloc] init];
     [self.teamNametoTwitterHandle setValue:(NSString*) @"AZCardinals" forKey:@"Arizona Cardinals"];
     [self.teamNametoTwitterHandle setValue:(NSString*) @"Atlanta_Falcons" forKey:@"Atlanta Falcons"];
+    [self.teamNametoTwitterHandle setValue:(NSString*) @"buffalobills" forKey:@"Buffalo Bills"];
+    [self.teamNametoTwitterHandle setValue:(NSString*) @"Ravens" forKey:@"Baltimore Ravens"];
+    [self.teamNametoTwitterHandle setValue:(NSString*) @"panthers" forKey:@"Carolina Panthers"];
+    [self.teamNametoTwitterHandle setValue:(NSString*) @"ChicagoBears" forKey:@"Chicago Bears"];
+    [self.teamNametoTwitterHandle setValue:(NSString*) @"Bengals" forKey:@"Cincinnati Bengals"];
+    [self.teamNametoTwitterHandle setValue:(NSString*) @"officialbrowns" forKey:@"Cleveland Browns"];
+    [self.teamNametoTwitterHandle setValue:(NSString*) @"dallascowboys" forKey:@"Dallas Cowboys"];
+    [self.teamNametoTwitterHandle setValue:(NSString*) @"denver_broncos" forKey:@"Denver Broncos"];
+    [self.teamNametoTwitterHandle setValue:(NSString*) @"DetroitLionsNFL" forKey:@"Detroit Lions"];
+    [self.teamNametoTwitterHandle setValue:(NSString*) @"packers" forKey:@"Green Bay Packers"];
+    [self.teamNametoTwitterHandle setValue:(NSString*) @"HoustonTexans" forKey:@"Houston Texans"];
+    [self.teamNametoTwitterHandle setValue:(NSString*) @"nflcolts" forKey:@"Indianapolis Colts"];
+    [self.teamNametoTwitterHandle setValue:(NSString*) @"jaguars" forKey:@"Jacksonville Jaguars"];
+    [self.teamNametoTwitterHandle setValue:(NSString*) @"kcchiefs" forKey:@"Kansas City Chiefs"];
+    [self.teamNametoTwitterHandle setValue:(NSString*) @"MiamiDolphins" forKey:@"Miami Dolphins"];
+    [self.teamNametoTwitterHandle setValue:(NSString*) @"Vikings" forKey:@"Minnesota Vikings"];
+    [self.teamNametoTwitterHandle setValue:(NSString*) @"Patriots" forKey:@"New England Patriots"];
+    [self.teamNametoTwitterHandle setValue:(NSString*) @"Saints" forKey:@"New Orleans Saints"];
+    [self.teamNametoTwitterHandle setValue:(NSString*) @"Giants" forKey:@"New York Giants"];
+    [self.teamNametoTwitterHandle setValue:(NSString*) @"nyjets" forKey:@"New York Jets"];
+    [self.teamNametoTwitterHandle setValue:(NSString*) @"RAIDERS" forKey:@"Oakland Raiders"];
+    [self.teamNametoTwitterHandle setValue:(NSString*) @"Eagles" forKey:@"Philadelphia Eagles"];
+    [self.teamNametoTwitterHandle setValue:(NSString*) @"steelers" forKey:@"Pittsburgh Steelers"];
+    [self.teamNametoTwitterHandle setValue:(NSString*) @"STLouisRams" forKey:@"Saint Louis Rams"];
+    [self.teamNametoTwitterHandle setValue:(NSString*) @"chargers" forKey:@"San Diego Chargers"];
+    [self.teamNametoTwitterHandle setValue:(NSString*) @"49ers" forKey:@"San Francisco 49ers"];
+    [self.teamNametoTwitterHandle setValue:(NSString*) @"Seahawks" forKey:@"Seattle Seahawks"];
+    [self.teamNametoTwitterHandle setValue:(NSString*) @"TBBuccaneers" forKey:@"Tampa Bay Buccaneers"];
+    [self.teamNametoTwitterHandle setValue:(NSString*) @"TennesseeTitans" forKey:@"Tennessee Titans"];
+    [self.teamNametoTwitterHandle setValue:(NSString*) @"Redskins" forKey:@"Washington Redskins"];
 }
 
 
