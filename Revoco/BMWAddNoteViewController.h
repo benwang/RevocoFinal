@@ -29,7 +29,8 @@
 //@property (weak,nonatomic) IBOutlet UITextView *contentField;
 
 - (IBAction)cancelModalViewController:(id)sender;
-- (IBAction)doneWithModalViewController:(id)sender;
+//- (IBAction)doneWithModalViewController:(id)sender;
+- (void) returnText;
 - (IBAction)viewTapped:(UIGestureRecognizer *)sender;
 - (BOOL)textViewShouldEndEditing:(UITextView *)textView;
 

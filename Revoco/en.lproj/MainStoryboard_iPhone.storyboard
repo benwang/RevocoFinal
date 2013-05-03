@@ -288,7 +288,7 @@
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" translatesAutoresizingMaskIntoConstraints="NO" id="5Ej-bH-WzL">
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <prototypes>
-                                    <tableViewCell contentMode="scaleToFill" selectionStyle="blue" indentationWidth="10" id="Ak4-cW-6hf">
+                                    <tableViewCell contentMode="scaleToFill" selectionStyle="blue" indentationWidth="10" reuseIdentifier="Cell" id="Iyj-Hk-57N">
                                         <rect key="frame" x="0.0" y="22" width="320" height="44"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
@@ -319,6 +319,7 @@
                     <toolbarItems/>
                     <connections>
                         <outlet property="detailMap" destination="0xu-Q6-9pC" id="aNY-LU-TFZ"/>
+                        <outlet property="tableView" destination="5Ej-bH-WzL" id="6E9-yc-4Zj"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="tcJ-VP-h5l" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -361,7 +362,6 @@
             <source key="sourceIdentifier" type="project" relativePath="./Classes/BMWAddNoteViewController.h"/>
             <relationships>
                 <relationship kind="action" name="cancelModalViewController:"/>
-                <relationship kind="action" name="doneWithModalViewController:"/>
                 <relationship kind="action" name="viewTapped:" candidateClass="UIGestureRecognizer"/>
                 <relationship kind="outlet" name="Team1Label" candidateClass="UILabel"/>
                 <relationship kind="outlet" name="Team2Label" candidateClass="UILabel"/>
@@ -373,6 +373,7 @@
             <source key="sourceIdentifier" type="project" relativePath="./Classes/BMWDetailOverflowController.h"/>
             <relationships>
                 <relationship kind="outlet" name="detailMap" candidateClass="MKMapView"/>
+                <relationship kind="outlet" name="tableView" candidateClass="UITableView"/>
             </relationships>
         </class>
         <class className="BMWDetailViewController" superclassName="UIViewController">

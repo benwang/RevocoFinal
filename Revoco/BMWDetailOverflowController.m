@@ -23,20 +23,48 @@
     location.longitude = self.detailItem.location.lon;
     [self addPinToMapAtCoordinate:location];
     
-    //Twitter feed
-    self.statuses = [[NSMutableArray alloc] init];
-    self.twitterUser = [NSString stringWithFormat: @"\{@}%@", self.detailItem.team1];
+    //Twitter feed--Initializing variables
+    self.team1Statuses = [[NSMutableArray alloc] init];
+    self.team2Statuses = [[NSMutableArray alloc] init];
+    self.statusesTemp = [[NSMutableArray alloc] init];
+    self.statusesMerged = [[NSMutableArray alloc] init];
+    self.currentElementData = [[NSMutableDictionary alloc] init];
+    self.currentElementString = [[NSMutableString alloc] init];
+    //Initializing Dictionary to convert from TeamName to the team's official TwitterHandle
+    [self populateTeamNametoTwitterHandle];
+    self.twitterUser1 = [self.teamNametoTwitterHandle objectForKey:self.detailItem.team1];
+    NSLog(@"%@",self.twitterUser1);
+    self.twitterUser2 = [self.teamNametoTwitterHandle objectForKey:self.detailItem.team2];
+    NSLog(@"%@",self.twitterUser2);
+
+    //Parse variables
+    //TODO: check if it is array of NSDictoinarys??
+    [self parseXMLForUser:self.twitterUser1];
+    for (NSMutableDictionary* d in self.statusesTemp) {
+        NSLog(@"%@",[d valueForKey:@"text"]);
+        [self.team1Statuses addObject:[d valueForKey:@"text"]];
+    }
     
-    [self parseXMLForUser:self.twitterUser];
+    self.statusesTemp = [[NSMutableArray alloc] init];
     
-//    objects = 
+    [self parseXMLForUser:self.twitterUser2];
+    for (NSMutableDictionary* d in self.statusesTemp) {
+        NSLog(@"%@",[d valueForKey:@"text"]);
+        [self.team2Statuses addObject:[d valueForKey:@"text"]];
+    }
+    
+    [self mergeStatuses];
+    
+    self.tableView.delegate = self;
+    self.tableView.dataSource = self;
+    [self.tableView reloadData];
     
 }
 
 - (void)parseXMLForUser:(NSString *)user {
     
     //Build the Twitter API URL by combining the user with the rest of the URL
-    NSString *urlString = [NSString stringWithFormat:@"http://twitter.com/statuses/user_timeline/%@.xml?count=3", user];
+    NSString *urlString = [NSString stringWithFormat:@"https://api.twitter.com/1/statuses/user_timeline.xml?screen_name=%@&count=5", user];
     NSURL *url = [NSURL URLWithString:urlString];
     
     //Create an instance of NSXMLParser and download the XML data from the URL
@@ -51,10 +79,96 @@
     [parser setShouldResolveExternalEntities:NO];
     
     [parser parse]; //Go go gadget XML parser...
-    
-    [parser release];
-    
 }
+
+- (void)parserDidStartDocument:(NSXMLParser *)parser {
+    NSLog(@"The XML document is now being parsed.");
+}
+
+- (void)parser:(NSXMLParser *)parser parseErrorOccurred:(NSError *)parseError {
+    NSLog(@"Parse error: %d", [parseError code]);
+}
+
+- (void)parser:(NSXMLParser *)parser didStartElement:(NSString *)elementName namespaceURI:(NSString *)namespaceURI qualifiedName:(NSString *)qName attributes:(NSDictionary *)attributeDict {
+    
+    //Store the name of the element currently being parsed.
+    self.currentElement = [elementName copy];
+    
+    //Create an empty mutable string to hold the contents of elements
+    self.currentElementString = [NSMutableString stringWithString:@""];
+    
+    //Empty the dictionary if we're parsing a new status element
+    if ([elementName isEqualToString:@"status"]) {
+        [self.currentElementData removeAllObjects];
+    }
+}
+
+- (void)parser:(NSXMLParser *)parser foundCharacters:(NSString *)string {
+    //Take the string inside an element (e.g. <tag>string</tag>) and save it in a property
+    [self.currentElementString appendString:string];
+}
+
+- (void)parser:(NSXMLParser *)parser didEndElement:(NSString *)elementName namespaceURI:(NSString *)namespaceURI qualifiedName:(NSString *)qName {
+    
+    //If we've hit the </status> tag, store the data in the statuses array
+    if ([elementName isEqualToString:@"status"]) {
+        [self.statusesTemp addObject:[self.currentElementData copy]];
+    }
+    
+    //Trim any extra spaces and newline characters from around currentElementString
+    NSString *string = [self.currentElementString stringByTrimmingCharactersInSet:[NSCharacterSet whitespaceAndNewlineCharacterSet]];
+    
+    //Store the status data in the currentElementData dictionary
+    if ([self.currentElement isEqualToString:@"created_at"]) {
+        [self.currentElementData setObject:string forKey:@"created_at"];
+    } else if ([self.currentElement isEqualToString:@"text"]) {
+        [self.currentElementData setObject:string forKey:@"text"];
+    } else if ([self.currentElement isEqualToString:@"retweeted"]) {
+        [self.currentElementData setObject:string forKey:@"retweeted"];
+    } else if ([self.currentElement isEqualToString:@"id"]) {
+        [self.currentElementData setObject:string forKey:@"id"];
+    } else if ([self.currentElement isEqualToString:@"profile_image_url"]) {
+        [self.currentElementData setObject:string forKey:@"profile_image_url"];
+    } else if ([self.currentElement isEqualToString:@"profile_background_image_url"]) {
+        [self.currentElementData setObject:string forKey:@"profile_background_image_url"];
+    } else if ([self.currentElement isEqualToString:@"profile_link_color"]) {
+        [self.currentElementData setObject:string forKey:@"profile_link_color"];
+    }
+}
+
+- (void)parserDidEndDocument:(NSXMLParser *)parser {
+    //Document has been parsed. It's time to fire some new methods off!
+    NSLog(@"%@", self.statusesTemp);
+    [self.tableView reloadData];
+}
+
+#pragma mark - Prepare for Twitter API call
+- (void) mergeStatuses
+{
+    //Merging team1's updates with team2's updates into one array
+    while (self.team1Statuses.count > 0 || self.team2Statuses.count > 0) {
+        if (self.team1Statuses.count > 0) {
+            [self.statusesMerged addObject:(NSString*)[self.team1Statuses objectAtIndex:0]];
+            NSLog(@"1: %@",[self.team1Statuses objectAtIndex:0]);
+            [self.team1Statuses removeObjectAtIndex:0];
+        }
+        if (self.team2Statuses.count > 0) {
+            [self.statusesMerged addObject:(NSString*)[self.team2Statuses objectAtIndex:0]];
+            NSLog(@"2: %@",[self.team2Statuses objectAtIndex:0]);
+            [self.team2Statuses removeObjectAtIndex:0];
+        }
+    }
+
+}
+
+- (void)populateTeamNametoTwitterHandle
+{
+    self.teamNametoTwitterHandle = [[NSMutableDictionary alloc] init];
+    [self.teamNametoTwitterHandle setValue:(NSString*) @"AZCardinals" forKey:@"Arizona Cardinals"];
+    [self.teamNametoTwitterHandle setValue:(NSString*) @"Atlanta_Falcons" forKey:@"Atlanta Falcons"];
+}
+
+
 
 #pragma mark - TableView Methods
 
@@ -65,15 +179,21 @@
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
-    return objects.count;
+    return self.statusesMerged.count;
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"Cell" forIndexPath:indexPath];
     
-    BMWNote *objectAtCell = [objects objectAtIndex:indexPath.row];
-    cell.textLabel.text = [[objectAtCell.team1 stringByAppendingString:@" vs "] stringByAppendingString:[NSString stringWithFormat:@"%@", objectAtCell.team2]];
+    NSString *tweet = [self.statusesMerged objectAtIndex:indexPath.row];
+    cell.textLabel.text = tweet;
+    NSLog(@"%@", tweet);
+    
+    
+    cell.userInteractionEnabled = NO;
+    cell.textLabel.font = [UIFont systemFontOfSize:14]; //Change this value to adjust size
+    cell.textLabel.numberOfLines = 2;
     return cell;
 }
 
@@ -83,13 +203,13 @@
     return NO;
 }
 
-- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
-{
-    if ([[UIDevice currentDevice] userInterfaceIdiom] == UIUserInterfaceIdiomPad) {
-        BMWNote *object = objects[indexPath.row];
-        self.detailViewController.detailItem = object;
-    }
-}
+//- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
+//{
+//    if ([[UIDevice currentDevice] userInterfaceIdiom] == UIUserInterfaceIdiomPad) {
+//        BMWNote *object = self.statusesMerged[indexPath.row];
+//        self.detailItem = object;
+//    }
+//}
 
 
 #pragma mark - MapView Methods
@@ -119,5 +239,6 @@
     region.center = coordinate;//no longer newCenter
     [_detailMap setRegion:region animated:YES];
 }
+
 
 @end
