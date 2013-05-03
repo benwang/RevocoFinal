@@ -1,3 +1,5 @@
+//Note: As of 5/3, not using this class
+
 //
 // CHCSVParser.m
 // CHCSVParser

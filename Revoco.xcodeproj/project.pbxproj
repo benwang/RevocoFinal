@@ -30,6 +30,7 @@
 		2565E300173228CC0044427F /* Social.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2565E2FF173228CB0044427F /* Social.framework */; };
 		2565E302173379150044427F /* nfl2012.csv in Resources */ = {isa = PBXBuildFile; fileRef = 2565E301173379150044427F /* nfl2012.csv */; };
 		2565E305173393600044427F /* CHCSVParser.m in Sources */ = {isa = PBXBuildFile; fileRef = 2565E304173393600044427F /* CHCSVParser.m */; };
+		2565E3091733A86E0044427F /* Icon.png in Resources */ = {isa = PBXBuildFile; fileRef = 2565E3081733A86E0044427F /* Icon.png */; };
 		2581F2B517278D2300279C07 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2581F2B417278D2300279C07 /* UIKit.framework */; };
 		2581F2B717278D2300279C07 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2581F2B617278D2300279C07 /* Foundation.framework */; };
 		2581F2B917278D2300279C07 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2581F2B817278D2300279C07 /* CoreGraphics.framework */; };
@@ -91,6 +92,8 @@
 		2565E301173379150044427F /* nfl2012.csv */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = nfl2012.csv; path = Revoco/nfl2012.csv; sourceTree = "<group>"; };
 		2565E303173393600044427F /* CHCSVParser.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CHCSVParser.h; path = Revoco/CHCSVParser.h; sourceTree = "<group>"; };
 		2565E304173393600044427F /* CHCSVParser.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CHCSVParser.m; path = Revoco/CHCSVParser.m; sourceTree = "<group>"; };
+		2565E3081733A86E0044427F /* Icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = Icon.png; path = Revoco/Icon.png; sourceTree = "<group>"; };
+		2565E30A1733A88F0044427F /* Icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Icon.png; sourceTree = "<group>"; };
 		2581F2B117278D2300279C07 /* Revoco.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Revoco.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		2581F2B417278D2300279C07 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		2581F2B617278D2300279C07 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -149,6 +152,7 @@
 		2581F2A817278D2300279C07 = {
 			isa = PBXGroup;
 			children = (
+				2565E30A1733A88F0044427F /* Icon.png */,
 				2565E303173393600044427F /* CHCSVParser.h */,
 				2565E304173393600044427F /* CHCSVParser.m */,
 				2565E301173379150044427F /* nfl2012.csv */,
@@ -175,6 +179,7 @@
 				2565E299172CC6B60044427F /* Default-568h@2x.png */,
 				2565E29A172CC6B60044427F /* Default.png */,
 				2565E29B172CC6B60044427F /* Default@2x.png */,
+				2565E3081733A86E0044427F /* Icon.png */,
 				2565E2F9172CD1280044427F /* NFL_logo.png */,
 				2565E29C172CC6B60044427F /* en.lproj */,
 				2565E2A3172CC6B60044427F /* fabric_of_squares_gray.png */,
@@ -312,6 +317,7 @@
 				2565E2B8172CC6B60044427F /* fabric_of_squares_gray.png in Resources */,
 				2565E2FA172CD1280044427F /* NFL_logo.png in Resources */,
 				2565E302173379150044427F /* nfl2012.csv in Resources */,
+				2565E3091733A86E0044427F /* Icon.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
