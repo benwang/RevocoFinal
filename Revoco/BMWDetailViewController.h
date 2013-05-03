@@ -20,6 +20,9 @@
 @property (strong, nonatomic) IBOutlet UILabel *detailTitle;
 @property (weak, nonatomic) IBOutlet UITextView *detailContent;
 @property (weak, nonatomic) IBOutlet UILabel *detailDescriptionLabel;
+@property (weak, nonatomic) IBOutlet UITextView *team1Stats;
+@property (weak, nonatomic) IBOutlet UITextView *team2Stats;
+
 //@property (strong, nonatomic) IBOutlet MKMapView *detailMap;
 
 //- (void) addPinToMapAtCoordinate:(CLLocationCoordinate2D) coordinate;

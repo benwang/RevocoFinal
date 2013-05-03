@@ -91,35 +91,29 @@
         [self.missingTeamAlertView show];
     } else
     {
-    
-    //first save the data
-    BMWDataManager *dataManager = [(BMWAppDelegate*)[[UIApplication sharedApplication] delegate] dataManager];
-
-    self.date = [NSDate date];
-    BMWCoreLocationandMapKit *sharedManager = [BMWCoreLocationandMapKit sharedManager];
-    location.latitude = sharedManager.locationManager.location.coordinate.latitude;
-    location.longitude = sharedManager.locationManager.location.coordinate.longitude;
-    
-    //then put it into core data
-/*MapNotes designation
-//    NSLog(@"%@", self.titleField.text);
-*/
-    NSLog(@"%@",self.Team1Label.text);
-    NSLog(@"%@",self.Team2Label.text);
-    NSLog(@"%@", self.contentField.text);
+        BMWDataManager *dataManager = [(BMWAppDelegate*)[[UIApplication sharedApplication] delegate] dataManager];
         
-    
+        //getting and setting date and location
+        self.date = [NSDate date];
+        BMWCoreLocationandMapKit *sharedManager = [BMWCoreLocationandMapKit sharedManager];
+        location.latitude = sharedManager.locationManager.location.coordinate.latitude;
+        location.longitude = sharedManager.locationManager.location.coordinate.longitude;
         
-//    BOOL status = [dataManager addNoteContentWithDate:self.date Title:self.titleField.text Detail:self.contentField.text Coordinate:location];
-    BOOL status = [dataManager addNoteContentWithDate:self.date Team1:self.Team1Label.text Team2:self.Team2Label.text Detail:self.contentField.text T1Stats:@" " T2Stats:@" " Coordinate:location];
-    NSLog(status ? @"Yes" : @"No");
-    
-    //Reset team1/team2 vars to set label for next time you add a note
-    appDelegate.team1 = @"Team1";
-    appDelegate.team2 = @"Team2";
-    
-    [self.navigationController popViewControllerAnimated:YES];
-//    [self dismissViewControllerAnimated:YES completion:nil];
+        //Getting stats from ESPN API
+        self.team1Stats = @"Team1 Stats:";
+        self.team2Stats = @"Team2 Stats:";
+        
+        
+        //Put data into back end
+        BOOL status = [dataManager addNoteContentWithDate:self.date Team1:self.Team1Label.text Team2:self.Team2Label.text Detail:self.contentField.text T1Stats:self.team1Stats T2Stats:self.team2Stats Coordinate:location];
+        NSLog(status ? @"Yes" : @"No");
+        
+        //Reset team1/team2 vars to set label for next time you add a note
+        appDelegate.team1 = @"Team1";
+        appDelegate.team2 = @"Team2";
+        
+        [self.navigationController popViewControllerAnimated:YES];
+        //    [self dismissViewControllerAnimated:YES completion:nil];
     }
 }
 

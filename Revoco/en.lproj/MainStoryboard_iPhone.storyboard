@@ -161,6 +161,8 @@
                         <outlet property="detailContent" destination="Lox-B5-YxS" id="6YE-jK-YKh"/>
                         <outlet property="detailDescriptionLabel" destination="27" id="28"/>
                         <outlet property="detailTitle" destination="N0t-wC-INl" id="nNX-ti-HLa"/>
+                        <outlet property="team1Stats" destination="nCF-HJ-tP6" id="roB-2d-L36"/>
+                        <outlet property="team2Stats" destination="aWk-SH-ZX6" id="CBH-Fy-J8Y"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="23" sceneMemberID="firstResponder"/>
@@ -382,6 +384,8 @@
                 <relationship kind="outlet" name="detailContent" candidateClass="UITextView"/>
                 <relationship kind="outlet" name="detailDescriptionLabel" candidateClass="UILabel"/>
                 <relationship kind="outlet" name="detailTitle" candidateClass="UILabel"/>
+                <relationship kind="outlet" name="team1Stats" candidateClass="UITextView"/>
+                <relationship kind="outlet" name="team2Stats" candidateClass="UITextView"/>
             </relationships>
         </class>
         <class className="BMWFindTeamViewController" superclassName="UIViewController">

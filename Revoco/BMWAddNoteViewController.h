@@ -22,6 +22,8 @@
 @property (weak, nonatomic) IBOutlet UILabel *Team2Label;
 @property (weak, nonatomic) IBOutlet UITextView *contentField;
 @property (strong, nonatomic) IBOutlet UITapGestureRecognizer *gestureRecognizer;
+@property (strong, nonatomic) NSString *team1Stats;
+@property (strong, nonatomic) NSString *team2Stats;
 @property(strong,nonatomic) UIAlertView * missingTeamAlertView;
 
 //Mapnotes stuff...

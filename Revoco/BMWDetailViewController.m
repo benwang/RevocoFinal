@@ -67,11 +67,12 @@
     self.detailDescriptionLabel.backgroundColor = [UIColor colorWithPatternImage:[UIImage imageNamed:kBMWBackgroundLink]];
     self.detailContent.text = _detailItem.detailString;
     self.detailContent.backgroundColor = [UIColor colorWithPatternImage:[UIImage imageNamed:kBMWBackgroundLink]];
-//    self.detailMap.mapType = MKMapTypeStandard;
-//    
-//    location.latitude = _detailItem.location.lat;
-//    location.longitude = _detailItem.location.lon;
-//    [self addPinToMapAtCoordinate:location];
+
+    self.team1Stats.text = self.detailItem.team1Stats;
+    self.team2Stats.text = self.detailItem.team2Stats;
+    self.team1Stats.backgroundColor = [UIColor colorWithPatternImage:[UIImage imageNamed:kBMWBackgroundLink]];
+    self.team2Stats.backgroundColor = [UIColor colorWithPatternImage:[UIImage imageNamed:kBMWBackgroundLink]];
+
     
     // Set background to pattern
     UIImage *patternImage = [UIImage imageNamed:kBMWBackgroundLink];
